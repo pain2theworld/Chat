@@ -91,7 +91,7 @@ namespace Chat
                 procent = (float)lettersDoc.Points / (lettersDoc.Points + lettersDoc.Misses);
             else
                 procent = 0;
-            result.Text = "You match succesful" + "\n"+"\n"+"     "+ procent + "%" + "\n" + "\n" + " of the letters!!";
+            result.Text = "You hit" + "\n"+"\n"+"     "+ procent + "%" + "\n" + "\n" + " of the letters!!";
             result.Visible = true;
             lettersDoc.Misses = 0;
             lettersDoc.Points = 0;
