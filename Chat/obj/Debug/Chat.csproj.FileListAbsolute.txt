@@ -12,3 +12,6 @@ C:\Users\Dajana\Documents\Visual Studio 2013\Projects\VP labs\Chat\Chat\obj\Debu
 C:\Users\Dajana\Documents\Visual Studio 2013\Projects\VP labs\Chat\Chat\obj\Debug\Chat.Game.resources
 C:\Users\Dajana\Documents\Visual Studio 2013\Projects\VP labs\Chat\Chat\obj\Debug\Chat.Profile.resources
 C:\Users\Dajana\Documents\Visual Studio 2013\Projects\VP labs\Chat\Chat\obj\Debug\Chat.SignIn.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\bin\Debug\Chat.exe.config
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.exe
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.pdb
