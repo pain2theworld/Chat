@@ -22,5 +22,11 @@ namespace Chat
             AddNewUser form = new AddNewUser();
             form.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LettersGame igra = new LettersGame();
+            igra.Show();
+        }
     }
 }

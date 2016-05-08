@@ -15,3 +15,15 @@ C:\Users\Dajana\Documents\Visual Studio 2013\Projects\VP labs\Chat\Chat\obj\Debu
 C:\Users\Riste\Desktop\Vp-project\Chat\Chat\bin\Debug\Chat.exe.config
 C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.exe
 C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.pdb
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\bin\Debug\Chat.exe
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\bin\Debug\Chat.pdb
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.csprojResolveAssemblyReference.cache
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.AddNewUser.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.ChatUsers.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.Form1.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.Game.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.Profile.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.Properties.Resources.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.SignIn.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.csproj.GenerateResource.Cache
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.LettersGame.resources

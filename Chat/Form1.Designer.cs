@@ -30,35 +30,50 @@
         {
             this.lblDesc1 = new System.Windows.Forms.Label();
             this.btnAddUser = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDesc1
             // 
             this.lblDesc1.AutoSize = true;
-            this.lblDesc1.Location = new System.Drawing.Point(33, 122);
+            this.lblDesc1.Location = new System.Drawing.Point(25, 99);
+            this.lblDesc1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesc1.Name = "lblDesc1";
-            this.lblDesc1.Size = new System.Drawing.Size(589, 17);
+            this.lblDesc1.Size = new System.Drawing.Size(452, 13);
             this.lblDesc1.TabIndex = 3;
             this.lblDesc1.Text = "Почетна страна за логирање, Welcome screen со копчиња Create New Account и Sign I" +
     "n";
             // 
             // btnAddUser
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(172, 253);
+            this.btnAddUser.Location = new System.Drawing.Point(129, 206);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(149, 35);
+            this.btnAddUser.Size = new System.Drawing.Size(112, 28);
             this.btnAddUser.TabIndex = 4;
             this.btnAddUser.Text = "Create New Account";
             this.btnAddUser.UseVisualStyleBackColor = true;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(338, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 556);
+            this.ClientSize = new System.Drawing.Size(724, 452);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.lblDesc1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Chat";
             this.ResumeLayout(false);
@@ -70,6 +85,7 @@
 
         private System.Windows.Forms.Label lblDesc1;
         private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.Button button1;
     }
 }
 
