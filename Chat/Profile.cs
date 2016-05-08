@@ -33,5 +33,19 @@ namespace Chat
             LettersGame igra = new LettersGame();
             igra.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChatUsers friends = new ChatUsers();
+            friends.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 odjava = new Form1();
+            odjava.Show();
+        }
     }
 }
