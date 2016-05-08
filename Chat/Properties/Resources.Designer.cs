@@ -83,6 +83,26 @@ namespace Chat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap game1 {
+            get {
+                object obj = ResourceManager.GetObject("game1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap girl {
+            get {
+                object obj = ResourceManager.GetObject("girl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paly {
             get {
                 object obj = ResourceManager.GetObject("paly", resourceCulture);
@@ -106,6 +126,16 @@ namespace Chat.Properties {
         internal static System.Drawing.Bitmap profile {
             get {
                 object obj = ResourceManager.GetObject("profile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sign_out {
+            get {
+                object obj = ResourceManager.GetObject("sign-out", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
