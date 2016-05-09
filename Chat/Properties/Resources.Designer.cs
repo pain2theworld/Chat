@@ -10,8 +10,9 @@
 
 namespace Chat.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -27,7 +28,8 @@ namespace Chat.Properties {
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+        internal static Image logo_transparent;
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
@@ -429,5 +431,7 @@ namespace Chat.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        public static Image BG_DarkCyan { get; internal set; }
     }
 }
