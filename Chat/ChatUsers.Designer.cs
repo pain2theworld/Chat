@@ -28,67 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblDesc5 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChatUsers));
             this.lstUsers = new System.Windows.Forms.ListBox();
-            this.lstChat = new System.Windows.Forms.ListBox();
             this.gbUsers = new System.Windows.Forms.GroupBox();
+            this.txtChat = new System.Windows.Forms.TextBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.gbUsers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblDesc5
-            // 
-            this.lblDesc5.AutoSize = true;
-            this.lblDesc5.Location = new System.Drawing.Point(68, 97);
-            this.lblDesc5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDesc5.Name = "lblDesc5";
-            this.lblDesc5.Size = new System.Drawing.Size(285, 13);
-            this.lblDesc5.TabIndex = 0;
-            this.lblDesc5.Text = "- Форма 3: Листа достапни корисници за чет и пораки";
             // 
             // lstUsers
             // 
+            this.lstUsers.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstUsers.FormattingEnabled = true;
-            this.lstUsers.Location = new System.Drawing.Point(5, 32);
-            this.lstUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lstUsers.ItemHeight = 20;
+            this.lstUsers.Location = new System.Drawing.Point(7, 40);
             this.lstUsers.Name = "lstUsers";
-            this.lstUsers.Size = new System.Drawing.Size(187, 368);
+            this.lstUsers.Size = new System.Drawing.Size(248, 444);
             this.lstUsers.TabIndex = 7;
-            // 
-            // lstChat
-            // 
-            this.lstChat.FormattingEnabled = true;
-            this.lstChat.Location = new System.Drawing.Point(268, 198);
-            this.lstChat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.lstChat.Name = "lstChat";
-            this.lstChat.Size = new System.Drawing.Size(148, 212);
-            this.lstChat.TabIndex = 8;
-            this.lstChat.Visible = false;
             // 
             // gbUsers
             // 
+            this.gbUsers.BackColor = System.Drawing.Color.Transparent;
             this.gbUsers.Controls.Add(this.lstUsers);
-            this.gbUsers.Location = new System.Drawing.Point(457, 10);
-            this.gbUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbUsers.Font = new System.Drawing.Font("Georgia", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbUsers.ForeColor = System.Drawing.Color.Aquamarine;
+            this.gbUsers.Location = new System.Drawing.Point(609, 12);
             this.gbUsers.Name = "gbUsers";
-            this.gbUsers.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbUsers.Size = new System.Drawing.Size(196, 405);
+            this.gbUsers.Size = new System.Drawing.Size(261, 498);
             this.gbUsers.TabIndex = 6;
             this.gbUsers.TabStop = false;
             this.gbUsers.Text = "Users";
             // 
+            // txtChat
+            // 
+            this.txtChat.Location = new System.Drawing.Point(26, 173);
+            this.txtChat.Multiline = true;
+            this.txtChat.Name = "txtChat";
+            this.txtChat.Size = new System.Drawing.Size(540, 331);
+            this.txtChat.TabIndex = 9;
+            this.txtChat.Visible = false;
+            // 
+            // Logo
+            // 
+            this.Logo.BackColor = System.Drawing.Color.Transparent;
+            this.Logo.Image = global::Chat.Properties.Resources.logo_transparent;
+            this.Logo.Location = new System.Drawing.Point(26, 23);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(265, 123);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Logo.TabIndex = 10;
+            this.Logo.TabStop = false;
+            // 
             // ChatUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 439);
-            this.Controls.Add(this.lstChat);
+            this.BackgroundImage = global::Chat.Properties.Resources.BG_DarkCyan;
+            this.ClientSize = new System.Drawing.Size(904, 540);
+            this.Controls.Add(this.Logo);
+            this.Controls.Add(this.txtChat);
             this.Controls.Add(this.gbUsers);
-            this.Controls.Add(this.lblDesc5);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChatUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChatUsers";
             this.gbUsers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -96,9 +102,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblDesc5;
         private System.Windows.Forms.ListBox lstUsers;
-        private System.Windows.Forms.ListBox lstChat;
         private System.Windows.Forms.GroupBox gbUsers;
+        private System.Windows.Forms.TextBox txtChat;
+        private System.Windows.Forms.PictureBox Logo;
     }
 }

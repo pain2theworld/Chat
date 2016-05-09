@@ -12,9 +12,16 @@ namespace Chat
 {
     public partial class AddNewUser : Form
     {
+        public string date;
+
         public AddNewUser()
         {
             InitializeComponent();
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            date = e.Start.ToShortDateString();
         }
     }
 }
