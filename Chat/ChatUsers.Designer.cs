@@ -38,50 +38,55 @@
             // lblDesc5
             // 
             this.lblDesc5.AutoSize = true;
-            this.lblDesc5.Location = new System.Drawing.Point(90, 119);
+            this.lblDesc5.Location = new System.Drawing.Point(68, 97);
+            this.lblDesc5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesc5.Name = "lblDesc5";
-            this.lblDesc5.Size = new System.Drawing.Size(372, 17);
+            this.lblDesc5.Size = new System.Drawing.Size(285, 13);
             this.lblDesc5.TabIndex = 0;
             this.lblDesc5.Text = "- Форма 3: Листа достапни корисници за чет и пораки";
             // 
             // lstUsers
             // 
             this.lstUsers.FormattingEnabled = true;
-            this.lstUsers.ItemHeight = 16;
-            this.lstUsers.Location = new System.Drawing.Point(7, 40);
+            this.lstUsers.Location = new System.Drawing.Point(5, 32);
+            this.lstUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstUsers.Name = "lstUsers";
-            this.lstUsers.Size = new System.Drawing.Size(248, 452);
+            this.lstUsers.Size = new System.Drawing.Size(187, 368);
             this.lstUsers.TabIndex = 7;
             // 
             // lstChat
             // 
             this.lstChat.FormattingEnabled = true;
-            this.lstChat.ItemHeight = 16;
-            this.lstChat.Location = new System.Drawing.Point(358, 244);
+            this.lstChat.Location = new System.Drawing.Point(268, 198);
+            this.lstChat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstChat.Name = "lstChat";
-            this.lstChat.Size = new System.Drawing.Size(196, 260);
+            this.lstChat.Size = new System.Drawing.Size(148, 212);
             this.lstChat.TabIndex = 8;
             this.lstChat.Visible = false;
             // 
             // gbUsers
             // 
             this.gbUsers.Controls.Add(this.lstUsers);
-            this.gbUsers.Location = new System.Drawing.Point(609, 12);
+            this.gbUsers.Location = new System.Drawing.Point(457, 10);
+            this.gbUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbUsers.Name = "gbUsers";
-            this.gbUsers.Size = new System.Drawing.Size(261, 498);
+            this.gbUsers.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbUsers.Size = new System.Drawing.Size(196, 405);
             this.gbUsers.TabIndex = 6;
             this.gbUsers.TabStop = false;
             this.gbUsers.Text = "Users";
             // 
             // ChatUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 540);
+            this.ClientSize = new System.Drawing.Size(680, 439);
             this.Controls.Add(this.lstChat);
             this.Controls.Add(this.gbUsers);
             this.Controls.Add(this.lblDesc5);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChatUsers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChatUsers";
             this.gbUsers.ResumeLayout(false);
             this.ResumeLayout(false);

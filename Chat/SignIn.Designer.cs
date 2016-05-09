@@ -34,20 +34,23 @@
             // lblDesc3
             // 
             this.lblDesc3.AutoSize = true;
-            this.lblDesc3.Location = new System.Drawing.Point(12, 56);
+            this.lblDesc3.Location = new System.Drawing.Point(9, 46);
+            this.lblDesc3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesc3.Name = "lblDesc3";
-            this.lblDesc3.Size = new System.Drawing.Size(1081, 17);
+            this.lblDesc3.Size = new System.Drawing.Size(818, 13);
             this.lblDesc3.TabIndex = 0;
             this.lblDesc3.Text = "- Sign In форма: Username, password и копче Sign In и Back. Aко е точно продолжув" +
     "а инаку печатиме „Wrong username or pasword\" (единствена форма на screen)";
             // 
             // SignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 282);
+            this.ClientSize = new System.Drawing.Size(740, 229);
             this.Controls.Add(this.lblDesc3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SignIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SignIn";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
@@ -51,23 +51,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Choise";
             // 
-            // label1
+            // button4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "You can play the game ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Or draw something";
+            this.button4.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.button4.Location = new System.Drawing.Point(0, 127);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(118, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Draw";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -79,15 +71,23 @@
             this.button3.Text = "Letters";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // label2
             // 
-            this.button4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button4.Location = new System.Drawing.Point(0, 127);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Draw";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Or draw something";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "You can play the game ";
             // 
             // button2
             // 
@@ -117,8 +117,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Game";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
