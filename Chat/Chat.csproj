@@ -163,6 +163,90 @@
   <ItemGroup>
     <None Include="Resources\girl.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bliznaci.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\devica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jarec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skorpija.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strelec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vaga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vodolija.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cetiri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="boy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

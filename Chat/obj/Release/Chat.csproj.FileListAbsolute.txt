@@ -1,0 +1,15 @@
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\bin\Release\Chat.exe.config
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.csprojResolveAssemblyReference.cache
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.AddNewUser.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.ChatUsers.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.Form1.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.Game.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.LettersGame.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.Profile.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.Properties.Resources.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.SignIn.resources
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.csproj.GenerateResource.Cache
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\bin\Release\Chat.exe
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\bin\Release\Chat.pdb
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.exe
+C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Release\Chat.pdb
