@@ -91,5 +91,34 @@ namespace Chat
         {
 
         }
+
+        public Image profilePicture (string gender, Random r)
+        {
+            Image picture;
+            if (gender.Equals("male"))
+            {
+                avatar.Add(1, Chat.Properties.Resources.eden);
+                avatar.Add(2, Chat.Properties.Resources.dva);
+                avatar.Add(3, Chat.Properties.Resources.tri);
+                avatar.Add(4, Chat.Properties.Resources.cetiri);
+                avatar.Add(5, Chat.Properties.Resources.pet);
+                picture = avatar[r.Next(1, 5)];
+            }
+            else
+            {
+                avatar.Add(1, Chat.Properties.Resources._1);
+                avatar.Add(2, Chat.Properties.Resources._2);
+                avatar.Add(3, Chat.Properties.Resources._2);
+                avatar.Add(4, Chat.Properties.Resources._4);
+                avatar.Add(5, Chat.Properties.Resources._5);
+                avatar.Add(6, Chat.Properties.Resources._6);
+                picture = avatar[r.Next(1, 6)];
+
+            }
+
+            return picture;
+        }
+
+
     }
 }

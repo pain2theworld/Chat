@@ -83,7 +83,7 @@
             this.label3.Font = new System.Drawing.Font("Georgia", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(-29, 3);
+            this.label3.Location = new System.Drawing.Point(-29, -8);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(1225, 38);
             this.label3.TabIndex = 5;
