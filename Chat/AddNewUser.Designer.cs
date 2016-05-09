@@ -41,56 +41,63 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(12, 37);
+            this.lblName.Location = new System.Drawing.Point(9, 30);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 17);
+            this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Name";
             // 
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(12, 77);
+            this.lblSurname.Location = new System.Drawing.Point(9, 63);
+            this.lblSurname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(65, 17);
+            this.lblSurname.Size = new System.Drawing.Size(49, 13);
             this.lblSurname.TabIndex = 1;
             this.lblSurname.Text = "Surname";
             // 
             // lblPssword
             // 
             this.lblPssword.AutoSize = true;
-            this.lblPssword.Location = new System.Drawing.Point(12, 117);
+            this.lblPssword.Location = new System.Drawing.Point(9, 95);
+            this.lblPssword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPssword.Name = "lblPssword";
-            this.lblPssword.Size = new System.Drawing.Size(69, 17);
+            this.lblPssword.Size = new System.Drawing.Size(53, 13);
             this.lblPssword.TabIndex = 2;
             this.lblPssword.Text = "Password";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(83, 32);
+            this.txtName.Location = new System.Drawing.Point(62, 26);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(172, 22);
+            this.txtName.Size = new System.Drawing.Size(130, 20);
             this.txtName.TabIndex = 3;
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(83, 72);
+            this.txtSurname.Location = new System.Drawing.Point(62, 58);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(172, 22);
+            this.txtSurname.Size = new System.Drawing.Size(130, 20);
             this.txtSurname.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(83, 112);
+            this.txtPassword.Location = new System.Drawing.Point(62, 91);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(172, 22);
+            this.txtPassword.Size = new System.Drawing.Size(130, 20);
             this.txtPassword.TabIndex = 5;
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(83, 158);
+            this.btnSubmit.Location = new System.Drawing.Point(62, 128);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(56, 19);
             this.btnSubmit.TabIndex = 6;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -98,18 +105,19 @@
             // lblDesc2
             // 
             this.lblDesc2.AutoSize = true;
-            this.lblDesc2.Location = new System.Drawing.Point(15, 229);
+            this.lblDesc2.Location = new System.Drawing.Point(11, 186);
+            this.lblDesc2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesc2.Name = "lblDesc2";
-            this.lblDesc2.Size = new System.Drawing.Size(723, 17);
+            this.lblDesc2.Size = new System.Drawing.Size(554, 13);
             this.lblDesc2.TabIndex = 7;
             this.lblDesc2.Text = "мејл, пол, дата на раѓање, oпис и евентуално слика. (Додека се пополнува оваа фор" +
     "ма првата не се губи.)";
             // 
             // AddNewUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 383);
+            this.ClientSize = new System.Drawing.Size(562, 311);
             this.Controls.Add(this.lblDesc2);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtPassword);
@@ -118,7 +126,9 @@
             this.Controls.Add(this.lblPssword);
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblName);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddNewUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
