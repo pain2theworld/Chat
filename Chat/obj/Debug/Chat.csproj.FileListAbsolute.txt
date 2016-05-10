@@ -27,3 +27,4 @@ C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.Properties.Resources.
 C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.SignIn.resources
 C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.csproj.GenerateResource.Cache
 C:\Users\Riste\Desktop\Vp-project\Chat\Chat\obj\Debug\Chat.LettersGame.resources
+C:\Users\Dajana\Documents\Visual Studio 2013\Projects\VP labs\Chat\Chat\obj\Debug\Chat.LettersGame.resources
