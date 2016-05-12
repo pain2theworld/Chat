@@ -25,7 +25,7 @@ namespace Chat
         public Image avatar { get; set; }
         public List<Message> inbox;
 
-        public User (string u, string f, string p, string e, string g, string db, string desc)
+        public User(string u, string f, string p, string e, string g, string db, string desc)
         {
             username = u;
             fullname = f;

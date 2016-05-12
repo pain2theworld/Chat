@@ -26,6 +26,11 @@ namespace Chat
             mcDateBirth.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             mcDateBirth.ShowToday = false;
             mcDateBirth.ShowTodayCircle = false;
+
+            User user_Dajana = new User("dajana", "Dajana Stojchevska", "lala", "dajana@finki.com", "female", "17/01/1996", "I love chocolates.");
+            User user_Viktorija = new User("viki", "Viktorija Velinovska", "viktorija", "viki@hotmail.com", "female", "27/01/1996", "I love rainbow colors.");
+            users.Add(user_Dajana.username, user_Dajana);
+            users.Add(user_Viktorija.username, user_Viktorija);
         }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
@@ -51,6 +56,8 @@ namespace Chat
                 // ako slika uploadedPhoto e uploadirana -> postavi ja za avatar so metodot user.ChangeAvatar(Image uploadedPhoto);
                 users.Add(txtUsername.Text, user);
                 this.DialogResult = DialogResult.OK;
+                Profile form = new Profile();
+                form.Show();
                 Close();
             } 
         }
