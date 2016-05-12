@@ -14,6 +14,7 @@ namespace Chat
     {
         public User user;
         public string date;
+        public HashSet<User> users = new HashSet<User>();
 
         public AddNewUser()
         {
@@ -55,6 +56,7 @@ namespace Chat
                 else g = gender.female.ToString();
                 user = new User(txtUsername.Text, txtFullName.Text, txtPassword.Text, txtEmail.Text, g, txtDateBirth.Text, txtAboutMe.Text);
                 // ako slika uploadedPhoto e uploadirana -> postavi ja za avatar so metodot user.ChangeAvatar(Image uploadedPhoto);
+                users.Add(user);
                 this.DialogResult = DialogResult.OK;
                 Close();
             }
