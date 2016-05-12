@@ -13,7 +13,8 @@ namespace Chat
     public partial class Profile : Form
     {
         Form1 f1 = new Form1();
-        AddNewUser obj = new AddNewUser();
+        Dictionary<string, User> users;
+        string date;
         public Dictionary<int, Image> avatar;
 
         public Profile()
@@ -21,15 +22,22 @@ namespace Chat
             InitializeComponent();
         }
 
+        public Profile(string d, Dictionary<string, User> u)
+        {
+            date = d;
+            users = u;
+            InitializeComponent();
+        }
+
         private void Profile_Load(object sender, EventArgs e)
         {
-            label8.Text = obj.date;
+            lblDateBirth.Text = date;
             avatar = new Dictionary<int, Image>();
             avatar.Add(1, Chat.Properties.Resources.f_3);
-            pictureBox1.Image = avatar[1];
-            toolTip1.SetToolTip(game, "You can play game");
-            toolTip1.SetToolTip(friends, "See your friends");
-            toolTip1.SetToolTip(imgLogOff, "Sign Out");
+            imgAvatar.Image = avatar[1];
+            toolTip1.SetToolTip(btnGame, "You can play game");
+            toolTip1.SetToolTip(btnFriends, "See your friends");
+            toolTip1.SetToolTip(btnSignOut, "Sign Out");
         }
         
         private void button1_Click(object sender, EventArgs e)

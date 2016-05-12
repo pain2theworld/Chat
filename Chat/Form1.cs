@@ -12,23 +12,23 @@ namespace Chat
 {
     public partial class Form1 : Form
     {
-       public Dictionary<string, User> users = new Dictionary<string, User>();
+        public Dictionary<string, User> users = new Dictionary<string, User>();
 
-       public Form1()
+        public Form1()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
-       private void Form1_Load(object sender, EventArgs e)
-       {
-           txtUsername.Text = "Username";
-           txtPassword.Text = "Password";
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtUsername.Text = "Username";
+            txtPassword.Text = "Password";
 
-           User user_Dajana = new User("dajana", "Dajana Stojchevska", "lala", "dajana@finki.com", "female", "17/01/1996", "I love chocolates.");
-           User user_Viktorija = new User("viki", "Viktorija Velinovska", "viktorija", "viki@hotmail.com", "female", "27/01/1996", "I love rainbow colors.");
-           users.Add(user_Dajana.username, user_Dajana);
-           users.Add(user_Viktorija.username, user_Viktorija);
-       }
+            User user_Dajana = new User("dajana", "Dajana Stojchevska", "lala", "dajana@finki.com", "female", "17/01/1996", "I love chocolates.");
+            User user_Viktorija = new User("viki", "Viktorija Velinovska", "viktorija", "viki@hotmail.com", "female", "27/01/1996", "I love rainbow colors.");
+            users.Add(user_Dajana.username, user_Dajana);
+            users.Add(user_Viktorija.username, user_Viktorija);
+        }
 
         private void txtUsername_MouseClick(object sender, MouseEventArgs e)
         {
@@ -77,9 +77,9 @@ namespace Chat
 
         private void llblRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AddNewUser form = new AddNewUser();
+            AddNewUser form = new AddNewUser(users);
             form.Show();
         }
-        
+
     }
 }

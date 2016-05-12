@@ -30,296 +30,296 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.imgLogOff = new System.Windows.Forms.Button();
-            this.friends = new System.Windows.Forms.Button();
-            this.game = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.gbMenu = new System.Windows.Forms.GroupBox();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnFriends = new System.Windows.Forms.Button();
+            this.btnGame = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.gbContactInfo = new System.Windows.Forms.GroupBox();
+            this.lblMail = new System.Windows.Forms.Label();
+            this.imgMail = new System.Windows.Forms.PictureBox();
+            this.gbBasicInfo = new System.Windows.Forms.GroupBox();
+            this.lblBD = new System.Windows.Forms.Label();
+            this.lblDateBirth = new System.Windows.Forms.Label();
+            this.imgGender = new System.Windows.Forms.PictureBox();
+            this.lblG = new System.Windows.Forms.Label();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.lblA = new System.Windows.Forms.Label();
+            this.gbAstro = new System.Windows.Forms.GroupBox();
+            this.imgZodiacSign = new System.Windows.Forms.PictureBox();
+            this.gbAbout = new System.Windows.Forms.GroupBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.imgAvatar = new System.Windows.Forms.PictureBox();
+            this.gbMenu.SuspendLayout();
+            this.gbContactInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMail)).BeginInit();
+            this.gbBasicInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGender)).BeginInit();
+            this.gbAstro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgZodiacSign)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAvatar)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gbMenu
             // 
-            this.groupBox1.Controls.Add(this.imgLogOff);
-            this.groupBox1.Controls.Add(this.friends);
-            this.groupBox1.Controls.Add(this.game);
-            this.groupBox1.Font = new System.Drawing.Font("Georgia", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(428, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(244, 98);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Menu";
+            this.gbMenu.Controls.Add(this.btnSignOut);
+            this.gbMenu.Controls.Add(this.btnFriends);
+            this.gbMenu.Controls.Add(this.btnGame);
+            this.gbMenu.Font = new System.Drawing.Font("Georgia", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbMenu.Location = new System.Drawing.Point(428, 2);
+            this.gbMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.gbMenu.Name = "gbMenu";
+            this.gbMenu.Padding = new System.Windows.Forms.Padding(4);
+            this.gbMenu.Size = new System.Drawing.Size(244, 98);
+            this.gbMenu.TabIndex = 3;
+            this.gbMenu.TabStop = false;
+            this.gbMenu.Text = "Menu";
             // 
-            // imgLogOff
+            // btnSignOut
             // 
-            this.imgLogOff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imgLogOff.BackgroundImage")));
-            this.imgLogOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgLogOff.FlatAppearance.BorderSize = 0;
-            this.imgLogOff.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.imgLogOff.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.imgLogOff.Location = new System.Drawing.Point(163, 23);
-            this.imgLogOff.Margin = new System.Windows.Forms.Padding(4);
-            this.imgLogOff.Name = "imgLogOff";
-            this.imgLogOff.Size = new System.Drawing.Size(69, 59);
-            this.imgLogOff.TabIndex = 3;
-            this.imgLogOff.TabStop = false;
-            this.imgLogOff.UseVisualStyleBackColor = true;
-            this.imgLogOff.Click += new System.EventHandler(this.button3_Click);
+            this.btnSignOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSignOut.BackgroundImage")));
+            this.btnSignOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.btnSignOut.Location = new System.Drawing.Point(163, 23);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(69, 59);
+            this.btnSignOut.TabIndex = 3;
+            this.btnSignOut.TabStop = false;
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.button3_Click);
             // 
-            // friends
+            // btnFriends
             // 
-            this.friends.BackgroundImage = global::Chat.Properties.Resources.friends;
-            this.friends.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.friends.FlatAppearance.BorderSize = 0;
-            this.friends.Location = new System.Drawing.Point(8, 23);
-            this.friends.Margin = new System.Windows.Forms.Padding(4);
-            this.friends.Name = "friends";
-            this.friends.Size = new System.Drawing.Size(69, 59);
-            this.friends.TabIndex = 2;
-            this.friends.TabStop = false;
-            this.friends.UseVisualStyleBackColor = true;
-            this.friends.Click += new System.EventHandler(this.button2_Click);
+            this.btnFriends.BackgroundImage = global::Chat.Properties.Resources.friends;
+            this.btnFriends.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFriends.FlatAppearance.BorderSize = 0;
+            this.btnFriends.Location = new System.Drawing.Point(8, 23);
+            this.btnFriends.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFriends.Name = "btnFriends";
+            this.btnFriends.Size = new System.Drawing.Size(69, 59);
+            this.btnFriends.TabIndex = 2;
+            this.btnFriends.TabStop = false;
+            this.btnFriends.UseVisualStyleBackColor = true;
+            this.btnFriends.Click += new System.EventHandler(this.button2_Click);
             // 
-            // game
+            // btnGame
             // 
-            this.game.BackgroundImage = global::Chat.Properties.Resources.game;
-            this.game.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.game.FlatAppearance.BorderSize = 0;
-            this.game.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.game.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.game.Location = new System.Drawing.Point(85, 23);
-            this.game.Margin = new System.Windows.Forms.Padding(4);
-            this.game.Name = "game";
-            this.game.Size = new System.Drawing.Size(69, 59);
-            this.game.TabIndex = 1;
-            this.game.TabStop = false;
-            this.game.UseVisualStyleBackColor = true;
-            this.game.Click += new System.EventHandler(this.button1_Click);
+            this.btnGame.BackgroundImage = global::Chat.Properties.Resources.game;
+            this.btnGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGame.FlatAppearance.BorderSize = 0;
+            this.btnGame.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnGame.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.btnGame.Location = new System.Drawing.Point(85, 23);
+            this.btnGame.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGame.Name = "btnGame";
+            this.btnGame.Size = new System.Drawing.Size(69, 59);
+            this.btnGame.TabIndex = 1;
+            this.btnGame.TabStop = false;
+            this.btnGame.UseVisualStyleBackColor = true;
+            this.btnGame.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
+            // lblName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(223, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 31);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Viktorija";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblName.Location = new System.Drawing.Point(223, 16);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(142, 31);
+            this.lblName.TabIndex = 6;
+            this.lblName.Text = "Viktorija";
             // 
-            // label3
+            // lblSurname
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(221, 54);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 31);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Velinovska";
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblSurname.Location = new System.Drawing.Point(221, 54);
+            this.lblSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(172, 31);
+            this.lblSurname.TabIndex = 7;
+            this.lblSurname.Text = "Velinovska";
             // 
-            // groupBox2
+            // gbContactInfo
             // 
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.pictureBox3);
-            this.groupBox2.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(16, 177);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(383, 62);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Contact Information";
+            this.gbContactInfo.Controls.Add(this.lblMail);
+            this.gbContactInfo.Controls.Add(this.imgMail);
+            this.gbContactInfo.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbContactInfo.Location = new System.Drawing.Point(16, 177);
+            this.gbContactInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.gbContactInfo.Name = "gbContactInfo";
+            this.gbContactInfo.Padding = new System.Windows.Forms.Padding(4);
+            this.gbContactInfo.Size = new System.Drawing.Size(383, 62);
+            this.gbContactInfo.TabIndex = 9;
+            this.gbContactInfo.TabStop = false;
+            this.gbContactInfo.Text = "Contact Information";
             // 
-            // label4
+            // lblMail
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.DarkRed;
-            this.label4.Location = new System.Drawing.Point(47, 31);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 18);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "email@gmail.com";
+            this.lblMail.AutoSize = true;
+            this.lblMail.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblMail.Location = new System.Drawing.Point(47, 31);
+            this.lblMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(144, 18);
+            this.lblMail.TabIndex = 1;
+            this.lblMail.Text = "email@gmail.com";
             // 
-            // pictureBox3
+            // imgMail
             // 
-            this.pictureBox3.Image = global::Chat.Properties.Resources.mail;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 26);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.imgMail.Image = global::Chat.Properties.Resources.mail;
+            this.imgMail.Location = new System.Drawing.Point(9, 26);
+            this.imgMail.Margin = new System.Windows.Forms.Padding(4);
+            this.imgMail.Name = "imgMail";
+            this.imgMail.Size = new System.Drawing.Size(32, 27);
+            this.imgMail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgMail.TabIndex = 0;
+            this.imgMail.TabStop = false;
             // 
-            // groupBox3
+            // gbBasicInfo
             // 
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.pictureBox4);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.groupBox3.Location = new System.Drawing.Point(17, 247);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(193, 186);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Basic Information";
+            this.gbBasicInfo.Controls.Add(this.lblBD);
+            this.gbBasicInfo.Controls.Add(this.lblDateBirth);
+            this.gbBasicInfo.Controls.Add(this.imgGender);
+            this.gbBasicInfo.Controls.Add(this.lblG);
+            this.gbBasicInfo.Controls.Add(this.lblAge);
+            this.gbBasicInfo.Controls.Add(this.lblA);
+            this.gbBasicInfo.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbBasicInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.gbBasicInfo.Location = new System.Drawing.Point(17, 247);
+            this.gbBasicInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.gbBasicInfo.Name = "gbBasicInfo";
+            this.gbBasicInfo.Padding = new System.Windows.Forms.Padding(4);
+            this.gbBasicInfo.Size = new System.Drawing.Size(193, 186);
+            this.gbBasicInfo.TabIndex = 10;
+            this.gbBasicInfo.TabStop = false;
+            this.gbBasicInfo.Text = "Basic Information";
             // 
-            // label9
+            // lblBD
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(4, 21);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 20);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Birth date";
+            this.lblBD.AutoSize = true;
+            this.lblBD.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblBD.Location = new System.Drawing.Point(4, 21);
+            this.lblBD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBD.Name = "lblBD";
+            this.lblBD.Size = new System.Drawing.Size(101, 20);
+            this.lblBD.TabIndex = 5;
+            this.lblBD.Text = "Birth date";
             // 
-            // label8
+            // lblDateBirth
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(8, 42);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 18);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "27 Januari";
+            this.lblDateBirth.AutoSize = true;
+            this.lblDateBirth.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDateBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblDateBirth.Location = new System.Drawing.Point(8, 42);
+            this.lblDateBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDateBirth.Name = "lblDateBirth";
+            this.lblDateBirth.Size = new System.Drawing.Size(81, 18);
+            this.lblDateBirth.TabIndex = 4;
+            this.lblDateBirth.Text = "27 Januari";
             // 
-            // pictureBox4
+            // imgGender
             // 
-            this.pictureBox4.Image = global::Chat.Properties.Resources.female;
-            this.pictureBox4.Location = new System.Drawing.Point(79, 92);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 34);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.imgGender.Image = global::Chat.Properties.Resources.female;
+            this.imgGender.Location = new System.Drawing.Point(79, 92);
+            this.imgGender.Margin = new System.Windows.Forms.Padding(4);
+            this.imgGender.Name = "imgGender";
+            this.imgGender.Size = new System.Drawing.Size(26, 34);
+            this.imgGender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgGender.TabIndex = 3;
+            this.imgGender.TabStop = false;
             // 
-            // label7
+            // lblG
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(4, 105);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 18);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Gender";
+            this.lblG.AutoSize = true;
+            this.lblG.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblG.Location = new System.Drawing.Point(4, 105);
+            this.lblG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblG.Name = "lblG";
+            this.lblG.Size = new System.Drawing.Size(64, 18);
+            this.lblG.TabIndex = 2;
+            this.lblG.Text = "Gender";
             // 
-            // label6
+            // lblAge
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(9, 85);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "20";
+            this.lblAge.AutoSize = true;
+            this.lblAge.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblAge.Location = new System.Drawing.Point(9, 85);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(29, 20);
+            this.lblAge.TabIndex = 1;
+            this.lblAge.Text = "20";
             // 
-            // label5
+            // lblA
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(8, 64);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Age";
+            this.lblA.AutoSize = true;
+            this.lblA.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblA.Location = new System.Drawing.Point(8, 64);
+            this.lblA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblA.Name = "lblA";
+            this.lblA.Size = new System.Drawing.Size(42, 20);
+            this.lblA.TabIndex = 0;
+            this.lblA.Text = "Age";
             // 
-            // groupBox4
+            // gbAstro
             // 
-            this.groupBox4.Controls.Add(this.pictureBox2);
-            this.groupBox4.Font = new System.Drawing.Font("Georgia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox4.ForeColor = System.Drawing.Color.Teal;
-            this.groupBox4.Location = new System.Drawing.Point(228, 250);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(132, 123);
-            this.groupBox4.TabIndex = 11;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Astro";
+            this.gbAstro.Controls.Add(this.imgZodiacSign);
+            this.gbAstro.Font = new System.Drawing.Font("Georgia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbAstro.ForeColor = System.Drawing.Color.Teal;
+            this.gbAstro.Location = new System.Drawing.Point(228, 250);
+            this.gbAstro.Margin = new System.Windows.Forms.Padding(4);
+            this.gbAstro.Name = "gbAstro";
+            this.gbAstro.Padding = new System.Windows.Forms.Padding(4);
+            this.gbAstro.Size = new System.Drawing.Size(132, 123);
+            this.gbAstro.TabIndex = 11;
+            this.gbAstro.TabStop = false;
+            this.gbAstro.Text = "Astro";
             // 
-            // pictureBox2
+            // imgZodiacSign
             // 
-            this.pictureBox2.Image = global::Chat.Properties.Resources.vodolija;
-            this.pictureBox2.Location = new System.Drawing.Point(23, 27);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(93, 89);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.imgZodiacSign.Image = global::Chat.Properties.Resources.vodolija;
+            this.imgZodiacSign.Location = new System.Drawing.Point(23, 27);
+            this.imgZodiacSign.Margin = new System.Windows.Forms.Padding(4);
+            this.imgZodiacSign.Name = "imgZodiacSign";
+            this.imgZodiacSign.Size = new System.Drawing.Size(93, 89);
+            this.imgZodiacSign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgZodiacSign.TabIndex = 5;
+            this.imgZodiacSign.TabStop = false;
             // 
-            // groupBox5
+            // gbAbout
             // 
-            this.groupBox5.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.groupBox5.Location = new System.Drawing.Point(420, 177);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(249, 256);
-            this.groupBox5.TabIndex = 12;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "About";
+            this.gbAbout.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.gbAbout.Location = new System.Drawing.Point(420, 177);
+            this.gbAbout.Margin = new System.Windows.Forms.Padding(4);
+            this.gbAbout.Name = "gbAbout";
+            this.gbAbout.Padding = new System.Windows.Forms.Padding(4);
+            this.gbAbout.Size = new System.Drawing.Size(249, 256);
+            this.gbAbout.TabIndex = 12;
+            this.gbAbout.TabStop = false;
+            this.gbAbout.Text = "About";
             // 
-            // pictureBox1
+            // imgAvatar
             // 
-            this.pictureBox1.Image = global::Chat.Properties.Resources.f_4;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 154);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.imgAvatar.Image = global::Chat.Properties.Resources.f_4;
+            this.imgAvatar.Location = new System.Drawing.Point(16, 2);
+            this.imgAvatar.Margin = new System.Windows.Forms.Padding(4);
+            this.imgAvatar.Name = "imgAvatar";
+            this.imgAvatar.Size = new System.Drawing.Size(169, 154);
+            this.imgAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgAvatar.TabIndex = 0;
+            this.imgAvatar.TabStop = false;
             // 
             // Profile
             // 
@@ -327,29 +327,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(693, 450);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.gbAbout);
+            this.Controls.Add(this.gbAstro);
+            this.Controls.Add(this.gbBasicInfo);
+            this.Controls.Add(this.gbContactInfo);
+            this.Controls.Add(this.lblSurname);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.gbMenu);
+            this.Controls.Add(this.imgAvatar);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Profile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profile";
             this.Load += new System.EventHandler(this.Profile_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbMenu.ResumeLayout(false);
+            this.gbContactInfo.ResumeLayout(false);
+            this.gbContactInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMail)).EndInit();
+            this.gbBasicInfo.ResumeLayout(false);
+            this.gbBasicInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGender)).EndInit();
+            this.gbAstro.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgZodiacSign)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,26 +357,26 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button game;
-        private System.Windows.Forms.Button friends;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button imgLogOff;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.PictureBox imgAvatar;
+        private System.Windows.Forms.Button btnGame;
+        private System.Windows.Forms.Button btnFriends;
+        private System.Windows.Forms.GroupBox gbMenu;
+        private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.PictureBox imgZodiacSign;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.GroupBox gbContactInfo;
+        private System.Windows.Forms.PictureBox imgMail;
+        private System.Windows.Forms.Label lblMail;
+        private System.Windows.Forms.GroupBox gbBasicInfo;
+        private System.Windows.Forms.PictureBox imgGender;
+        private System.Windows.Forms.Label lblG;
+        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.Label lblA;
+        private System.Windows.Forms.Label lblBD;
+        private System.Windows.Forms.Label lblDateBirth;
+        private System.Windows.Forms.GroupBox gbAstro;
+        private System.Windows.Forms.GroupBox gbAbout;
         private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -14,10 +14,16 @@ namespace Chat
     {
         public User user;
         public string date;
-        Form1 obj = new Form1();
+        Dictionary<string, User> users;
 
         public AddNewUser()
         {
+            InitializeComponent();
+        }
+
+        public AddNewUser(Dictionary<string, User> u)
+        {
+            users = u;
             InitializeComponent();
         }
 
@@ -42,16 +48,16 @@ namespace Chat
             txtEmail.Focus();
             mcDateBirth.Focus();
             txtAboutMe.Focus();
-            if (txtUsername.Text.Trim().Length > 0 && !obj.users.ContainsKey(txtUsername.Text) && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
+            if (txtUsername.Text.Trim().Length > 0 && !users.ContainsKey(txtUsername.Text) && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
             {
                 string g;
                 if(rbMale.Checked) g = gender.male.ToString();
                 else g = gender.female.ToString();
                 user = new User(txtUsername.Text, txtFullName.Text, txtPassword.Text, txtEmail.Text, g, txtDateBirth.Text, txtAboutMe.Text);
                 // ako slika uploadedPhoto e uploadirana -> postavi ja za avatar so metodot user.ChangeAvatar(Image uploadedPhoto);
-                obj.users.Add(txtUsername.Text, user);
+                users.Add(txtUsername.Text, user);
                 this.DialogResult = DialogResult.OK;
-                Profile form = new Profile();
+                Profile form = new Profile(date, users);
                 form.Show();
                 Close();
             } 
@@ -69,7 +75,7 @@ namespace Chat
                 e.Cancel = true;
                 errorProvider1.SetError(txtUsername, "Username field can not be empty!");
             }
-            else if (obj.users.ContainsKey(txtUsername.Text))
+            else if (users.ContainsKey(txtUsername.Text))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtUsername, "Username already exists!");
