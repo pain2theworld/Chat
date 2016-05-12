@@ -158,9 +158,6 @@
     <None Include="Resources\f_6.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\female.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\game.png" />
   </ItemGroup>
   <ItemGroup>
@@ -179,19 +176,55 @@
     <None Include="Resources\m_5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\male.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sign-out.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\mail.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sign_out.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\vodolija.png" />
+    <None Include="Resources\1_aries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_taurus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_gemini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_cancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_leo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_virgo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_libra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_scorpio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_sagittarius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_capricorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11_aquarius.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12_pisces.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender_female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender_male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\413625.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

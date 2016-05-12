@@ -28,9 +28,10 @@ namespace Chat
         private void ChatUsers_Load(object sender, EventArgs e)
         {
             foreach (User u in users.Values)
-            {
-                lstUsers.Items.Add(u);
-            }
+                lstUsers.Items.Add(u.fullname);
+            for (int i = 0; i < lstUsers.Items.Count; i++)
+                if (i % 2 == 0) lstUsers.Items[i].ForeColor = Color.DarkBlue;
+                else lstUsers.Items[i].ForeColor = Color.DodgerBlue;
         }
     }
 }

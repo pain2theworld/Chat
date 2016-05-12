@@ -281,7 +281,7 @@
             this.gbAstro.Margin = new System.Windows.Forms.Padding(4);
             this.gbAstro.Name = "gbAstro";
             this.gbAstro.Padding = new System.Windows.Forms.Padding(4);
-            this.gbAstro.Size = new System.Drawing.Size(132, 123);
+            this.gbAstro.Size = new System.Drawing.Size(132, 132);
             this.gbAstro.TabIndex = 11;
             this.gbAstro.TabStop = false;
             this.gbAstro.Text = "Astro";
@@ -289,7 +289,7 @@
             // imgZodiacSign
             // 
             this.imgZodiacSign.Image = global::Chat.Properties.Resources.vodolija;
-            this.imgZodiacSign.Location = new System.Drawing.Point(23, 27);
+            this.imgZodiacSign.Location = new System.Drawing.Point(19, 28);
             this.imgZodiacSign.Margin = new System.Windows.Forms.Padding(4);
             this.imgZodiacSign.Name = "imgZodiacSign";
             this.imgZodiacSign.Size = new System.Drawing.Size(93, 89);
@@ -335,6 +335,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.gbMenu);
             this.Controls.Add(this.imgAvatar);
+            this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Profile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
