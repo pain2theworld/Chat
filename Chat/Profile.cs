@@ -39,22 +39,22 @@ namespace Chat
             toolTip1.SetToolTip(btnFriends, "See your friends");
             toolTip1.SetToolTip(btnSignOut, "Sign Out");
         }
-        
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnFriends_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChatUsers friends = new ChatUsers(active, users);
+            friends.Show();
+        }
+
+        private void btnGame_Click(object sender, EventArgs e)
         {
             this.Hide();
             LettersGame igra = new LettersGame();
             igra.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ChatUsers friends = new ChatUsers(users);
-            friends.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void btnSignOut_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 odjava = new Form1();

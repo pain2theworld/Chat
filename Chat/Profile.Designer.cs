@@ -90,7 +90,7 @@
             this.btnSignOut.TabIndex = 3;
             this.btnSignOut.TabStop = false;
             this.btnSignOut.UseVisualStyleBackColor = true;
-            this.btnSignOut.Click += new System.EventHandler(this.button3_Click);
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // btnFriends
             // 
@@ -104,7 +104,7 @@
             this.btnFriends.TabIndex = 2;
             this.btnFriends.TabStop = false;
             this.btnFriends.UseVisualStyleBackColor = true;
-            this.btnFriends.Click += new System.EventHandler(this.button2_Click);
+            this.btnFriends.Click += new System.EventHandler(this.btnFriends_Click);
             // 
             // btnGame
             // 
@@ -120,7 +120,7 @@
             this.btnGame.TabIndex = 1;
             this.btnGame.TabStop = false;
             this.btnGame.UseVisualStyleBackColor = true;
-            this.btnGame.Click += new System.EventHandler(this.button1_Click);
+            this.btnGame.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // lblName
             // 

@@ -12,6 +12,7 @@ namespace Chat
 {
     public partial class ChatUsers : Form
     {
+        User active;
         Dictionary<string, User> users;
 
         public ChatUsers()
@@ -19,19 +20,28 @@ namespace Chat
             InitializeComponent();
         }
 
-        public ChatUsers(Dictionary<string, User> u)
+        public ChatUsers(User u, Dictionary<string, User> all)
         {
-            users = u;
+            active = u;
+            users = all;
             InitializeComponent();
         }
 
         private void ChatUsers_Load(object sender, EventArgs e)
         {
             foreach (User u in users.Values)
-                lstUsers.Items.Add(u.fullname);
+            {
+                if (u != active)
+                    lstUsers.Items.Add(u.fullname);
+            }
             for (int i = 0; i < lstUsers.Items.Count; i++)
                 if (i % 2 == 0) lstUsers.Items[i].ForeColor = Color.DarkBlue;
                 else lstUsers.Items[i].ForeColor = Color.DodgerBlue;
+        }
+
+        private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
