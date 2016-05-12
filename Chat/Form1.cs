@@ -26,6 +26,12 @@ namespace Chat
 
             User user_Dajana = new User("dajana", "Dajana Stojchevska", "lala", "dajana@finki.com", "female", "17/01/1996", "I love chocolates.");
             User user_Viktorija = new User("viki", "Viktorija Velinovska", "viktorija", "viki@hotmail.com", "female", "27/01/1996", "I love rainbow colors.");
+            user_Dajana.AddMessage(user_Viktorija, new Message("Dajana", "Hi!"));
+            user_Viktorija.AddMessage(user_Dajana, new Message("Dajana", "Hi!"));
+            user_Viktorija.AddMessage(user_Dajana, new Message("viki", "Hey"));
+            user_Dajana.AddMessage(user_Viktorija, new Message("viki", "Hey"));
+            user_Viktorija.AddMessage(user_Dajana, new Message("viki", "What's up?"));
+            user_Dajana.AddMessage(user_Viktorija, new Message("viki", "What's up?"));
             users.Add(user_Dajana.username, user_Dajana);
             users.Add(user_Viktorija.username, user_Viktorija);
         }
@@ -84,10 +90,11 @@ namespace Chat
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             User u;
-            if(!users.TryGetValue(txtUsername.Text, out u))
+            if (!users.TryGetValue(txtUsername.Text, out u))
                 MessageBox.Show("Username does not exist! Register first.");
-            else {
-                if(u.password != txtPassword.Text)
+            else
+            {
+                if (u.password != txtPassword.Text)
                     MessageBox.Show("Wrong password!");
                 else
                 {
@@ -95,8 +102,8 @@ namespace Chat
                     form.Show();
                 }
             }
-                
-           
+
+
         }
 
     }

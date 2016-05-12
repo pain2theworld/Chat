@@ -23,7 +23,7 @@ namespace Chat
         public string dateBirth { get; set; }
         public string description { get; set; }
         public Image avatar { get; set; }
-        public List<Message> inbox;
+        public Dictionary<string, List<Message>> inbox;
 
         public User(string u, string f, string p, string e, string g, string db, string desc)
         {
@@ -34,12 +34,16 @@ namespace Chat
             gender = g;
             dateBirth = db;
             description = desc;
-            inbox = new List<Message>();
+            inbox = new Dictionary<string, List<Message>>();
         }
 
-        public void AddMessage(Message m)
+        public void AddMessage(User u, Message m)
         {
-            inbox.Add(m);
+            List<Message> existent;
+            if (!inbox.ContainsKey(u.username))
+                inbox.Add(u.username, new List<Message>());
+            if (inbox.TryGetValue(u.username, out existent))
+                existent.Add(m);
         }
 
         public void ChangeAvatar(Image i)

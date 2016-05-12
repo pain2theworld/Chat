@@ -35,6 +35,8 @@
             this.lstUsers = new System.Windows.Forms.ListView();
             this.txtChat = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lstMessages = new System.Windows.Forms.ListView();
+            this.llblName = new System.Windows.Forms.LinkLabel();
             this.gbUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,8 +66,10 @@
             listViewGroup1,
             listViewGroup2});
             this.lstUsers.Location = new System.Drawing.Point(3, 23);
+            this.lstUsers.MultiSelect = false;
             this.lstUsers.Name = "lstUsers";
             this.lstUsers.Size = new System.Drawing.Size(255, 472);
+            this.lstUsers.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lstUsers.TabIndex = 11;
             this.lstUsers.UseCompatibleStateImageBehavior = false;
             this.lstUsers.View = System.Windows.Forms.View.List;
@@ -73,10 +77,10 @@
             // 
             // txtChat
             // 
-            this.txtChat.Location = new System.Drawing.Point(26, 173);
+            this.txtChat.Location = new System.Drawing.Point(26, 442);
             this.txtChat.Multiline = true;
             this.txtChat.Name = "txtChat";
-            this.txtChat.Size = new System.Drawing.Size(540, 331);
+            this.txtChat.Size = new System.Drawing.Size(540, 62);
             this.txtChat.TabIndex = 9;
             this.txtChat.Visible = false;
             // 
@@ -91,12 +95,36 @@
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
+            // lstMessages
+            // 
+            this.lstMessages.Location = new System.Drawing.Point(26, 200);
+            this.lstMessages.Name = "lstMessages";
+            this.lstMessages.Size = new System.Drawing.Size(540, 222);
+            this.lstMessages.TabIndex = 12;
+            this.lstMessages.UseCompatibleStateImageBehavior = false;
+            this.lstMessages.View = System.Windows.Forms.View.List;
+            this.lstMessages.Visible = false;
+            // 
+            // llblName
+            // 
+            this.llblName.ActiveLinkColor = System.Drawing.Color.Aquamarine;
+            this.llblName.AutoSize = true;
+            this.llblName.BackColor = System.Drawing.Color.Transparent;
+            this.llblName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblName.LinkColor = System.Drawing.Color.Aquamarine;
+            this.llblName.Location = new System.Drawing.Point(22, 173);
+            this.llblName.Name = "llblName";
+            this.llblName.Size = new System.Drawing.Size(0, 24);
+            this.llblName.TabIndex = 15;
+            // 
             // ChatUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chat.Properties.Resources.BG_DarkCyan;
             this.ClientSize = new System.Drawing.Size(904, 540);
+            this.Controls.Add(this.llblName);
+            this.Controls.Add(this.lstMessages);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtChat);
             this.Controls.Add(this.gbUsers);
@@ -118,5 +146,7 @@
         private System.Windows.Forms.TextBox txtChat;
         private System.Windows.Forms.ListView lstUsers;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListView lstMessages;
+        private System.Windows.Forms.LinkLabel llblName;
     }
 }
