@@ -40,6 +40,7 @@
             // lstUsers
             // 
             this.lstUsers.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstUsers.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lstUsers.FormattingEnabled = true;
             this.lstUsers.ItemHeight = 20;
             this.lstUsers.Location = new System.Drawing.Point(7, 40);
@@ -93,6 +94,7 @@
             this.Name = "ChatUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChatUsers";
+            this.Load += new System.EventHandler(this.ChatUsers_Load);
             this.gbUsers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);

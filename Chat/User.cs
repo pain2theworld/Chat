@@ -46,5 +46,10 @@ namespace Chat
         {
             avatar = i;
         }
+
+        public override string ToString()
+        {
+            return fullname;
+        }
     }
 }

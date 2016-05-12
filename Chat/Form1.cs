@@ -81,5 +81,23 @@ namespace Chat
             form.Show();
         }
 
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            User u;
+            if(!users.TryGetValue(txtUsername.Text, out u))
+                MessageBox.Show("Username does not exist! Register first.");
+            else {
+                if(u.password != txtPassword.Text)
+                    MessageBox.Show("Wrong password!");
+                else
+                {
+                    Profile form = new Profile(u, users);
+                    form.Show();
+                }
+            }
+                
+           
+        }
+
     }
 }

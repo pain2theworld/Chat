@@ -12,11 +12,25 @@ namespace Chat
 {
     public partial class ChatUsers : Form
     {
-        Form1 obj = new Form1();
+        Dictionary<string, User> users;
 
         public ChatUsers()
         {
             InitializeComponent();
+        }
+
+        public ChatUsers(Dictionary<string, User> u)
+        {
+            users = u;
+            InitializeComponent();
+        }
+
+        private void ChatUsers_Load(object sender, EventArgs e)
+        {
+            foreach (User u in users.Values)
+            {
+                lstUsers.Items.Add(u);
+            }
         }
     }
 }

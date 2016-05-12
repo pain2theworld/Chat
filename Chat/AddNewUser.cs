@@ -57,7 +57,8 @@ namespace Chat
                 // ako slika uploadedPhoto e uploadirana -> postavi ja za avatar so metodot user.ChangeAvatar(Image uploadedPhoto);
                 users.Add(txtUsername.Text, user);
                 this.DialogResult = DialogResult.OK;
-                Profile form = new Profile(date, users);
+                Profile form = new Profile(user, users);
+                this.Hide();
                 form.Show();
                 Close();
             } 
