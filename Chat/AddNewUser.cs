@@ -14,7 +14,7 @@ namespace Chat
     {
         public User user;
         public string date;
-        public HashSet<User> users = new HashSet<User>();
+        public Dictionary<string, User> users = new Dictionary<string, User>();
 
         public AddNewUser()
         {
@@ -34,11 +34,6 @@ namespace Chat
             txtDateBirth.Text = date.ToString();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             txtUsername.Focus();
@@ -56,10 +51,59 @@ namespace Chat
                 else g = gender.female.ToString();
                 user = new User(txtUsername.Text, txtFullName.Text, txtPassword.Text, txtEmail.Text, g, txtDateBirth.Text, txtAboutMe.Text);
                 // ako slika uploadedPhoto e uploadirana -> postavi ja za avatar so metodot user.ChangeAvatar(Image uploadedPhoto);
-                users.Add(user);
+                users.Add(txtUsername.Text, user);
                 this.DialogResult = DialogResult.OK;
                 Close();
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void txtUsername_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtUsername.Text.Trim().Length == 0)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUsername, "Username field can not be empty!");
+            }
+            else
+                errorProvider1.SetError(txtUsername, null);
+        }
+
+        private void txtFullName_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtFullName.Text.Trim().Length == 0)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtFullName, "FullName field can not be empty!");
+            }
+            else
+                errorProvider1.SetError(txtFullName, null);
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtPassword.Text.Trim().Length == 0)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPassword, "Password field can not be empty!");
+            }
+            else
+                errorProvider1.SetError(txtPassword, null);
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtEmail.Text.Trim().Length == 0)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtEmail, "E-mail field can not be empty!");
+            }
+            else
+                errorProvider1.SetError(txtEmail, null);
         }
     }
 }

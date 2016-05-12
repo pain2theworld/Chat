@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewUser));
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
@@ -53,8 +54,10 @@
             this.Logo = new System.Windows.Forms.PictureBox();
             this.txtDateBirth = new System.Windows.Forms.TextBox();
             this.lblSelectCal = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -101,6 +104,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(269, 30);
             this.txtUsername.TabIndex = 0;
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
             // 
             // txtFullName
             // 
@@ -110,6 +114,7 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(269, 30);
             this.txtFullName.TabIndex = 1;
+            this.txtFullName.Validating += new System.ComponentModel.CancelEventHandler(this.txtFullName_Validating);
             // 
             // txtPassword
             // 
@@ -120,10 +125,13 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(269, 30);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnCancel.CausesValidation = false;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCancel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Aquamarine;
@@ -144,6 +152,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(269, 30);
             this.txtEmail.TabIndex = 3;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // lblEmail
             // 
@@ -225,6 +234,7 @@
             // btnChoose
             // 
             this.btnChoose.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnChoose.CausesValidation = false;
             this.btnChoose.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
             this.btnChoose.FlatAppearance.BorderSize = 2;
             this.btnChoose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -341,12 +351,18 @@
             this.lblSelectCal.TabIndex = 19;
             this.lblSelectCal.Text = "*select from calendar";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddNewUser
             // 
+            this.AcceptButton = this.btnSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Chat.Properties.Resources.BG_DarkCyan;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(942, 555);
             this.Controls.Add(this.mcDateBirth);
             this.Controls.Add(this.txtAboutMe);
@@ -372,6 +388,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,5 +420,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDateBirth;
         private System.Windows.Forms.Label lblSelectCal;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
