@@ -46,11 +46,13 @@
             this.lblPhoto = new System.Windows.Forms.Label();
             this.btnChoose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtDateBirth = new System.Windows.Forms.TextBox();
+            this.lblSelectCal = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
@@ -241,6 +243,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.lblSelectCal);
+            this.groupBox1.Controls.Add(this.txtDateBirth);
             this.groupBox1.Controls.Add(this.btnChoose);
             this.groupBox1.Controls.Add(this.lblPhoto);
             this.groupBox1.Controls.Add(this.label1);
@@ -257,6 +261,34 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fill the boxes with information about you";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(503, 397);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "*optional";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnSubmit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSubmit.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.Color.Aquamarine;
+            this.btnSubmit.Location = new System.Drawing.Point(503, 456);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(224, 52);
+            this.btnSubmit.TabIndex = 17;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // rbFemale
             // 
@@ -290,33 +322,24 @@
             this.Logo.TabIndex = 8;
             this.Logo.TabStop = false;
             // 
-            // btnSubmit
+            // txtDateBirth
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnSubmit.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSubmit.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.Color.Aquamarine;
-            this.btnSubmit.Location = new System.Drawing.Point(503, 456);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(224, 52);
-            this.btnSubmit.TabIndex = 17;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.txtDateBirth.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateBirth.Location = new System.Drawing.Point(41, 339);
+            this.txtDateBirth.Name = "txtDateBirth";
+            this.txtDateBirth.ReadOnly = true;
+            this.txtDateBirth.Size = new System.Drawing.Size(122, 27);
+            this.txtDateBirth.TabIndex = 18;
             // 
-            // label1
+            // lblSelectCal
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label1.Location = new System.Drawing.Point(503, 397);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "*optional";
+            this.lblSelectCal.AutoSize = true;
+            this.lblSelectCal.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectCal.Location = new System.Drawing.Point(31, 378);
+            this.lblSelectCal.Name = "lblSelectCal";
+            this.lblSelectCal.Size = new System.Drawing.Size(142, 17);
+            this.lblSelectCal.TabIndex = 19;
+            this.lblSelectCal.Text = "*select from calendar";
             // 
             // AddNewUser
             // 
@@ -378,5 +401,7 @@
         private System.Windows.Forms.RadioButton rbMale;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDateBirth;
+        private System.Windows.Forms.Label lblSelectCal;
     }
 }

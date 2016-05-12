@@ -20,9 +20,17 @@ namespace Chat
             InitializeComponent();
         }
 
+        private void AddNewUser_Load(object sender, EventArgs e)
+        {
+            mcDateBirth.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            mcDateBirth.ShowToday = false;
+            mcDateBirth.ShowTodayCircle = false;
+        }
+
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
             date = e.Start.ToShortDateString();
+            txtDateBirth.Text = date.ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -40,19 +48,16 @@ namespace Chat
             rbFemale.Focus();
             mcDateBirth.Focus();
             txtAboutMe.Focus();
-            if (txtUsername.Text.Trim().Length > 0 && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && (rbMale.Checked || rbFemale.Checked) && txtAboutMe.Text.Trim().Length > 0)
+            if (txtUsername.Text.Trim().Length > 0 && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && (rbMale.Checked || rbFemale.Checked) && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
             {
-                //aerodrom = new Aerodrom(txtGrad.Text, txtIme.Text, txtKratenka.Text);
+                string g;
+                if(rbMale.Checked) g = gender.male.ToString();
+                else g = gender.female.ToString();
+                user = new User(txtUsername.Text, txtFullName.Text, txtPassword.Text, txtEmail.Text, g, txtDateBirth.Text, txtAboutMe.Text);
+                // ako slika uploadedPhoto e uploadirana -> postavi ja za avatar so metodot user.ChangeAvatar(Image uploadedPhoto);
                 this.DialogResult = DialogResult.OK;
                 Close();
             }
-        }
-
-        private void AddNewUser_Load(object sender, EventArgs e)
-        {
-            mcDateBirth.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-            mcDateBirth.ShowToday = false;
-            mcDateBirth.ShowTodayCircle = false;
         }
     }
 }

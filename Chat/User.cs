@@ -25,7 +25,7 @@ namespace Chat
         public Image avatar { get; set; }
         public List<Message> inbox;
 
-        public User (string u, string f, string p, string e, string g, string db, string desc, Image a)
+        public User (string u, string f, string p, string e, string g, string db, string desc)
         {
             username = u;
             fullname = f;
@@ -34,13 +34,17 @@ namespace Chat
             gender = g;
             dateBirth = db;
             description = desc;
-            avatar = a;
             inbox = new List<Message>();
         }
 
         public void AddMessage(Message m)
         {
             inbox.Add(m);
+        }
+
+        public void ChangeAvatar(Image i)
+        {
+            avatar = i;
         }
     }
 }
