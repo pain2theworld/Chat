@@ -40,11 +40,9 @@ namespace Chat
             txtFullName.Focus();
             txtPassword.Focus();
             txtEmail.Focus();
-            rbMale.Focus();
-            rbFemale.Focus();
             mcDateBirth.Focus();
             txtAboutMe.Focus();
-            if (txtUsername.Text.Trim().Length > 0 && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && (rbMale.Checked || rbFemale.Checked) && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
+            if (txtUsername.Text.Trim().Length > 0 && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
             {
                 string g;
                 if(rbMale.Checked) g = gender.male.ToString();
@@ -54,7 +52,7 @@ namespace Chat
                 users.Add(txtUsername.Text, user);
                 this.DialogResult = DialogResult.OK;
                 Close();
-            }
+            } 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -104,6 +102,28 @@ namespace Chat
             }
             else
                 errorProvider1.SetError(txtEmail, null);
+        }
+
+        private void txtDateBirth_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtDateBirth.Text.Trim().Length == 0)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtDateBirth, "Date is required!");
+            }
+            else
+                errorProvider1.SetError(txtDateBirth, null);
+        }
+
+        private void txtAboutMe_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtAboutMe.Text.Trim().Length == 0)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtAboutMe, "You must write something about you!");
+            }
+            else
+                errorProvider1.SetError(txtAboutMe, null);
         }
     }
 }
