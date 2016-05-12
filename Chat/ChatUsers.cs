@@ -32,7 +32,7 @@ namespace Chat
             foreach (User u in users.Values)
             {
                 if (u != active)
-                    lstUsers.Items.Add(u.fullname);
+                    lstUsers.Items.Add(u.ToString());
             }
             for (int i = 0; i < lstUsers.Items.Count; i++)
                 if (i % 2 == 0) lstUsers.Items[i].ForeColor = Color.DarkBlue;
@@ -41,7 +41,7 @@ namespace Chat
 
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            txtChat.Visible = true;
         }
     }
 }
