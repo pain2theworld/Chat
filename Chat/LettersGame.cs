@@ -92,10 +92,10 @@ namespace Chat
             float procent;
             if (lettersDoc.Points + lettersDoc.Misses > 0)
 
-                procent = (float)lettersDoc.Points / (lettersDoc.Points + lettersDoc.Misses)*100;
+                procent = (float)lettersDoc.Points / (lettersDoc.Points + lettersDoc.Misses) * 100;
             else
                 procent = 0;
-            result.Text = "You hit" + "\n"+"\n"+"     "+ procent + "%" + "\n" + "\n" + " of the letters!!";
+            result.Text = "You hit" + "\n" + "\n" + "     " + procent + "%" + "\n" + "\n" + " of the letters!!";
             result.Visible = true;
             lettersDoc.Misses = 0;
             lettersDoc.Points = 0;

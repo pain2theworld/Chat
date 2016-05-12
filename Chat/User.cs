@@ -3,23 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Chat
 {
-    class User
+    public enum gender
     {
-        private string name { get; set; }
-        private string surname { get; set; }
-        private string password { get; set; }
-        private string description { get; set; }
-        private List<Message> inbox;
+        male,
+        female
+    }
 
-        public User (string n, string s, string p, string desc)
+    public class User
+    {
+        public string username { get; set; }
+        public string fullname { get; set; }
+        public string password { get; set; }
+        public string email { get; set; }
+        public string gender { get; set; }
+        public string dateBirth { get; set; }
+        public string description { get; set; }
+        public Image avatar { get; set; }
+        public List<Message> inbox;
+
+        public User (string u, string f, string p, string e, string g, string db, string desc, Image a)
         {
-            name = n;
-            surname = s;
+            username = u;
+            fullname = f;
             password = p;
+            email = e;
+            gender = g;
+            dateBirth = db;
             description = desc;
+            avatar = a;
             inbox = new List<Message>();
         }
 

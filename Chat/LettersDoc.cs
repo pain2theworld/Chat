@@ -22,7 +22,7 @@ namespace Chat
             Misses = 0;
             random = new Random();
             Count = new int[26];
-       
+
         }
 
         public void AddLetter(int width, int height)
@@ -56,9 +56,9 @@ namespace Chat
                 }
                 else
                     if (l.IsHit)
-                {
-                    Letters.RemoveAt(i);
-                }
+                    {
+                        Letters.RemoveAt(i);
+                    }
             }
         }
 
