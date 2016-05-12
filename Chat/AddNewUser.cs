@@ -47,7 +47,7 @@ namespace Chat
             txtEmail.Focus();
             mcDateBirth.Focus();
             txtAboutMe.Focus();
-            if (txtUsername.Text.Trim().Length > 0 && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
+            if (txtUsername.Text.Trim().Length > 0 && !users.ContainsKey(txtUsername.Text) && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
             {
                 string g;
                 if(rbMale.Checked) g = gender.male.ToString();
@@ -74,8 +74,14 @@ namespace Chat
                 e.Cancel = true;
                 errorProvider1.SetError(txtUsername, "Username field can not be empty!");
             }
+            else if (users.ContainsKey(txtUsername.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUsername, "Username already exists!");
+            }
             else
                 errorProvider1.SetError(txtUsername, null);
+            
         }
 
         private void txtFullName_Validating(object sender, CancelEventArgs e)

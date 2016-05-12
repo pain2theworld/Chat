@@ -31,33 +31,33 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.imgLogOff = new System.Windows.Forms.Button();
+            this.friends = new System.Windows.Forms.Button();
+            this.game = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.imgLogOff = new System.Windows.Forms.Button();
-            this.friends = new System.Windows.Forms.Button();
-            this.game = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +75,52 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu";
+            // 
+            // imgLogOff
+            // 
+            this.imgLogOff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imgLogOff.BackgroundImage")));
+            this.imgLogOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgLogOff.FlatAppearance.BorderSize = 0;
+            this.imgLogOff.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.imgLogOff.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.imgLogOff.Location = new System.Drawing.Point(163, 23);
+            this.imgLogOff.Margin = new System.Windows.Forms.Padding(4);
+            this.imgLogOff.Name = "imgLogOff";
+            this.imgLogOff.Size = new System.Drawing.Size(69, 59);
+            this.imgLogOff.TabIndex = 3;
+            this.imgLogOff.TabStop = false;
+            this.imgLogOff.UseVisualStyleBackColor = true;
+            this.imgLogOff.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // friends
+            // 
+            this.friends.BackgroundImage = global::Chat.Properties.Resources.friends;
+            this.friends.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.friends.FlatAppearance.BorderSize = 0;
+            this.friends.Location = new System.Drawing.Point(8, 23);
+            this.friends.Margin = new System.Windows.Forms.Padding(4);
+            this.friends.Name = "friends";
+            this.friends.Size = new System.Drawing.Size(69, 59);
+            this.friends.TabIndex = 2;
+            this.friends.TabStop = false;
+            this.friends.UseVisualStyleBackColor = true;
+            this.friends.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // game
+            // 
+            this.game.BackgroundImage = global::Chat.Properties.Resources.game;
+            this.game.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.game.FlatAppearance.BorderSize = 0;
+            this.game.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.game.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.game.Location = new System.Drawing.Point(85, 23);
+            this.game.Margin = new System.Windows.Forms.Padding(4);
+            this.game.Name = "game";
+            this.game.Size = new System.Drawing.Size(69, 59);
+            this.game.TabIndex = 1;
+            this.game.TabStop = false;
+            this.game.UseVisualStyleBackColor = true;
+            this.game.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -125,6 +171,17 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "email@gmail.com";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Chat.Properties.Resources.mail;
+            this.pictureBox3.Location = new System.Drawing.Point(9, 26);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label9);
@@ -167,6 +224,17 @@
             this.label8.Size = new System.Drawing.Size(81, 18);
             this.label8.TabIndex = 4;
             this.label8.Text = "27 Januari";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Chat.Properties.Resources.female;
+            this.pictureBox4.Location = new System.Drawing.Point(79, 92);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(26, 34);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
             // 
             // label7
             // 
@@ -218,6 +286,17 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Astro";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Chat.Properties.Resources.vodolija;
+            this.pictureBox2.Location = new System.Drawing.Point(23, 27);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(93, 89);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
             // groupBox5
             // 
             this.groupBox5.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -230,85 +309,6 @@
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "About";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Chat.Properties.Resources.vodolija;
-            this.pictureBox2.Location = new System.Drawing.Point(23, 27);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(93, 89);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Chat.Properties.Resources.female;
-            this.pictureBox4.Location = new System.Drawing.Point(79, 92);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 31);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Chat.Properties.Resources.mail;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 26);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // imgLogOff
-            // 
-            this.imgLogOff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("imgLogOff.BackgroundImage")));
-            this.imgLogOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgLogOff.FlatAppearance.BorderSize = 0;
-            this.imgLogOff.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.imgLogOff.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.imgLogOff.Location = new System.Drawing.Point(163, 23);
-            this.imgLogOff.Margin = new System.Windows.Forms.Padding(4);
-            this.imgLogOff.Name = "imgLogOff";
-            this.imgLogOff.Size = new System.Drawing.Size(69, 59);
-            this.imgLogOff.TabIndex = 3;
-            this.imgLogOff.TabStop = false;
-            this.imgLogOff.UseVisualStyleBackColor = true;
-            this.imgLogOff.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // friends
-            // 
-            this.friends.BackgroundImage = global::Chat.Properties.Resources.friends;
-            this.friends.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.friends.FlatAppearance.BorderSize = 0;
-            this.friends.Location = new System.Drawing.Point(8, 23);
-            this.friends.Margin = new System.Windows.Forms.Padding(4);
-            this.friends.Name = "friends";
-            this.friends.Size = new System.Drawing.Size(69, 59);
-            this.friends.TabIndex = 2;
-            this.friends.TabStop = false;
-            this.friends.UseVisualStyleBackColor = true;
-            this.friends.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // game
-            // 
-            this.game.BackgroundImage = global::Chat.Properties.Resources.game;
-            this.game.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.game.FlatAppearance.BorderSize = 0;
-            this.game.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.game.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.game.Location = new System.Drawing.Point(85, 23);
-            this.game.Margin = new System.Windows.Forms.Padding(4);
-            this.game.Name = "game";
-            this.game.Size = new System.Drawing.Size(69, 59);
-            this.game.TabIndex = 1;
-            this.game.TabStop = false;
-            this.game.UseVisualStyleBackColor = true;
-            this.game.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -343,12 +343,12 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
