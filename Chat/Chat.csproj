@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61404D51-C4C0-4507-A5CC-E8F7EEC9AB74}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Chat</RootNamespace>
+    <AssemblyName>Chat</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewUser.Designer.cs">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatUsers.Designer.cs">
+      <DependentUpon>ChatUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LetterCircle.cs" />
+    <Compile Include="LettersDoc.cs" />
+    <Compile Include="LettersGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LettersGame.Designer.cs">
+      <DependentUpon>LettersGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs" />
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="AddNewUser.resx">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatUsers.resx">
+      <DependentUpon>ChatUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LettersGame.resx">
+      <DependentUpon>LettersGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG_DarkCyan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\friends.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_aries.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_taurus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_gemini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_cancer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_leo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_virgo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7_libra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8_scorpio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9_sagittarius.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10_capricorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11_aquarius.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12_pisces.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender_female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gender_male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\413625.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
