@@ -14,7 +14,7 @@ namespace Chat
     {
         public User user;
         public string date;
-        public Dictionary<string, User> users = new Dictionary<string, User>();
+        Form1 obj = new Form1();
 
         public AddNewUser()
         {
@@ -26,11 +26,6 @@ namespace Chat
             mcDateBirth.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             mcDateBirth.ShowToday = false;
             mcDateBirth.ShowTodayCircle = false;
-
-            User user_Dajana = new User("dajana", "Dajana Stojchevska", "lala", "dajana@finki.com", "female", "17/01/1996", "I love chocolates.");
-            User user_Viktorija = new User("viki", "Viktorija Velinovska", "viktorija", "viki@hotmail.com", "female", "27/01/1996", "I love rainbow colors.");
-            users.Add(user_Dajana.username, user_Dajana);
-            users.Add(user_Viktorija.username, user_Viktorija);
         }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
@@ -47,14 +42,14 @@ namespace Chat
             txtEmail.Focus();
             mcDateBirth.Focus();
             txtAboutMe.Focus();
-            if (txtUsername.Text.Trim().Length > 0 && !users.ContainsKey(txtUsername.Text) && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
+            if (txtUsername.Text.Trim().Length > 0 && !obj.users.ContainsKey(txtUsername.Text) && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
             {
                 string g;
                 if(rbMale.Checked) g = gender.male.ToString();
                 else g = gender.female.ToString();
                 user = new User(txtUsername.Text, txtFullName.Text, txtPassword.Text, txtEmail.Text, g, txtDateBirth.Text, txtAboutMe.Text);
                 // ako slika uploadedPhoto e uploadirana -> postavi ja za avatar so metodot user.ChangeAvatar(Image uploadedPhoto);
-                users.Add(txtUsername.Text, user);
+                obj.users.Add(txtUsername.Text, user);
                 this.DialogResult = DialogResult.OK;
                 Profile form = new Profile();
                 form.Show();
@@ -74,7 +69,7 @@ namespace Chat
                 e.Cancel = true;
                 errorProvider1.SetError(txtUsername, "Username field can not be empty!");
             }
-            else if (users.ContainsKey(txtUsername.Text))
+            else if (obj.users.ContainsKey(txtUsername.Text))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtUsername, "Username already exists!");

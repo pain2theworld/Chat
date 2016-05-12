@@ -12,13 +12,20 @@ namespace Chat
 {
     public partial class Profile : Form
     {
-        string datum;
+        Form1 f1 = new Form1();
+        AddNewUser obj = new AddNewUser();
         public Dictionary<int, Image> avatar;
+
         public Profile()
         {
+            InitializeComponent();
+        }
+
+        private void Profile_Load(object sender, EventArgs e)
+        {
+            label8.Text = obj.date;
             avatar = new Dictionary<int, Image>();
             avatar.Add(1, Chat.Properties.Resources.f_3);
-            InitializeComponent();
             pictureBox1.Image = avatar[1];
             toolTip1.SetToolTip(game, "You can play game");
             toolTip1.SetToolTip(friends, "See your friends");
@@ -44,21 +51,6 @@ namespace Chat
             this.Hide();
             Form1 odjava = new Form1();
             odjava.Show();
-        }
-
-        private void Profile_Load(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            //lbl.Text = monthCalendar1.ToString();
-        }
-
-        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            datum = e.Start.ToShortDateString();
         }
 
         public Image profilePicture(string gender, Random r)

@@ -12,6 +12,8 @@ namespace Chat
 {
     public partial class Form1 : Form
     {
+       public Dictionary<string, User> users = new Dictionary<string, User>();
+
        public Form1()
         {
             InitializeComponent(); 
@@ -21,6 +23,11 @@ namespace Chat
        {
            txtUsername.Text = "Username";
            txtPassword.Text = "Password";
+
+           User user_Dajana = new User("dajana", "Dajana Stojchevska", "lala", "dajana@finki.com", "female", "17/01/1996", "I love chocolates.");
+           User user_Viktorija = new User("viki", "Viktorija Velinovska", "viktorija", "viki@hotmail.com", "female", "27/01/1996", "I love rainbow colors.");
+           users.Add(user_Dajana.username, user_Dajana);
+           users.Add(user_Viktorija.username, user_Viktorija);
        }
 
         private void txtUsername_MouseClick(object sender, MouseEventArgs e)

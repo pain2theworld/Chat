@@ -12,6 +12,8 @@ namespace Chat
 {
     public partial class ChatUsers : Form
     {
+        Form1 obj = new Form1();
+
         public ChatUsers()
         {
             InitializeComponent();
