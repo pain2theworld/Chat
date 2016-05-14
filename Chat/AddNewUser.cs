@@ -66,7 +66,9 @@ namespace Chat
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Hide();
+            Form1 forma = new Form1();
+            forma.Show();
         }
 
         private void txtUsername_Validating(object sender, CancelEventArgs e)

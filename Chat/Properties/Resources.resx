@@ -175,9 +175,7 @@
   <data name="f_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\f_6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vodolija" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Astro\vodolija.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  
   <data name="m_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\m_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

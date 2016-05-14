@@ -288,7 +288,7 @@
             // 
             // imgZodiacSign
             // 
-            this.imgZodiacSign.Image = global::Chat.Properties.Resources.vodolija;
+          //  this.imgZodiacSign.Image = global::Chat.Properties.Resources.vodolija;
             this.imgZodiacSign.Location = new System.Drawing.Point(19, 28);
             this.imgZodiacSign.Margin = new System.Windows.Forms.Padding(4);
             this.imgZodiacSign.Name = "imgZodiacSign";
