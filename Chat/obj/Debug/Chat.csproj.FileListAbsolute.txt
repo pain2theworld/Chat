@@ -34,9 +34,9 @@ C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.AddNewUser.resources
 C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.ChatUsers.resources
 C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.Form1.resources
 C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.LettersGame.resources
-C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.Profile.resources
 C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.csproj.GenerateResource.Cache
 C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.Properties.Resources.resources
 C:\Users\Riste\Desktop\proekt\Chat\Chat\bin\Debug\Chat.exe
 C:\Users\Riste\Desktop\proekt\Chat\Chat\bin\Debug\Chat.pdb
 C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.pdb
+C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.picGender.resources

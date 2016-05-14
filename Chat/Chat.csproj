@@ -187,6 +187,45 @@
   <ItemGroup>
     <None Include="Resources\gender_male.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\bik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\bliznaci.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\devica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\jarec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\lav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\oven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\rak.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\ribi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\skorpija.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\strelec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\vaga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Astro\vodolija.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -83,6 +83,7 @@ namespace Chat
 
         private void llblRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             AddNewUser form = new AddNewUser(users);
             form.Show();
         }
@@ -98,7 +99,8 @@ namespace Chat
                     MessageBox.Show("Wrong password!");
                 else
                 {
-                    Profile form = new Profile(u, users);
+                    this.Hide();
+                    picGender form = new picGender(u, users);
                     form.Show();
                 }
             }

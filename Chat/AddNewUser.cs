@@ -57,7 +57,8 @@ namespace Chat
                 // ako slika uploadedPhoto e uploadirana -> postavi ja za avatar so metodot user.ChangeAvatar(Image uploadedPhoto);
                 users.Add(txtUsername.Text, user);
                 this.DialogResult = DialogResult.OK;
-                Profile form = new Profile(user, users);
+                picGender form = new picGender(user, users);
+
                 this.Hide();
                 form.Show();
                 Close();
@@ -141,6 +142,11 @@ namespace Chat
             }
             else
                 errorProvider1.SetError(txtAboutMe, null);
+        }
+
+        private void txtDateBirth_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

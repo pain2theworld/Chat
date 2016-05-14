@@ -116,7 +116,7 @@ namespace Chat
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Profile profil = new Profile();
+            picGender profil = new picGender();
             profil.Show();
         }
 

@@ -68,7 +68,7 @@
             this.lblUsername.Location = new System.Drawing.Point(51, 56);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(102, 24);
+            this.lblUsername.Size = new System.Drawing.Size(81, 18);
             this.lblUsername.TabIndex = 7;
             this.lblUsername.Text = "Username";
             // 
@@ -80,7 +80,7 @@
             this.lblFullName.Location = new System.Drawing.Point(51, 108);
             this.lblFullName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(104, 24);
+            this.lblFullName.Size = new System.Drawing.Size(81, 18);
             this.lblFullName.TabIndex = 8;
             this.lblFullName.Text = "Full Name";
             // 
@@ -92,7 +92,7 @@
             this.lblPassword.Location = new System.Drawing.Point(51, 160);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(95, 24);
+            this.lblPassword.Size = new System.Drawing.Size(76, 18);
             this.lblPassword.TabIndex = 9;
             this.lblPassword.Text = "Password";
             // 
@@ -102,7 +102,7 @@
             this.txtUsername.Location = new System.Drawing.Point(189, 53);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(269, 30);
+            this.txtUsername.Size = new System.Drawing.Size(269, 26);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
             // 
@@ -112,7 +112,7 @@
             this.txtFullName.Location = new System.Drawing.Point(189, 105);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(269, 30);
+            this.txtFullName.Size = new System.Drawing.Size(269, 26);
             this.txtFullName.TabIndex = 2;
             this.txtFullName.Validating += new System.ComponentModel.CancelEventHandler(this.txtFullName_Validating);
             // 
@@ -123,7 +123,7 @@
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(269, 30);
+            this.txtPassword.Size = new System.Drawing.Size(269, 26);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
@@ -133,7 +133,7 @@
             this.txtEmail.Location = new System.Drawing.Point(189, 209);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(269, 30);
+            this.txtEmail.Size = new System.Drawing.Size(269, 26);
             this.txtEmail.TabIndex = 4;
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
@@ -145,7 +145,7 @@
             this.lblEmail.Location = new System.Drawing.Point(51, 212);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(70, 24);
+            this.lblEmail.Size = new System.Drawing.Size(55, 18);
             this.lblEmail.TabIndex = 11;
             this.lblEmail.Text = "E-mail";
             // 
@@ -157,7 +157,7 @@
             this.lblGender.Location = new System.Drawing.Point(51, 265);
             this.lblGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(76, 24);
+            this.lblGender.Size = new System.Drawing.Size(61, 18);
             this.lblGender.TabIndex = 12;
             this.lblGender.Text = "Gender";
             // 
@@ -169,7 +169,7 @@
             this.lblDateBirth.Location = new System.Drawing.Point(51, 316);
             this.lblDateBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateBirth.Name = "lblDateBirth";
-            this.lblDateBirth.Size = new System.Drawing.Size(124, 24);
+            this.lblDateBirth.Size = new System.Drawing.Size(97, 18);
             this.lblDateBirth.TabIndex = 13;
             this.lblDateBirth.Text = "Date of birth";
             // 
@@ -180,7 +180,7 @@
             this.lblAboutMe.ForeColor = System.Drawing.Color.Aquamarine;
             this.lblAboutMe.Location = new System.Drawing.Point(511, 160);
             this.lblAboutMe.Name = "lblAboutMe";
-            this.lblAboutMe.Size = new System.Drawing.Size(98, 24);
+            this.lblAboutMe.Size = new System.Drawing.Size(78, 18);
             this.lblAboutMe.TabIndex = 1;
             this.lblAboutMe.Text = "About Me";
             // 
@@ -211,7 +211,7 @@
             this.lblPhoto.Location = new System.Drawing.Point(503, 372);
             this.lblPhoto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhoto.Name = "lblPhoto";
-            this.lblPhoto.Size = new System.Drawing.Size(206, 24);
+            this.lblPhoto.Size = new System.Drawing.Size(161, 18);
             this.lblPhoto.TabIndex = 7;
             this.lblPhoto.Text = "Upload profile picture";
             // 
@@ -261,6 +261,7 @@
             // 
             this.btnCancel.BackColor = System.Drawing.Color.DarkCyan;
             this.btnCancel.CausesValidation = false;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCancel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Aquamarine;
@@ -279,7 +280,7 @@
             this.lblSelectCal.Font = new System.Drawing.Font("Georgia", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelectCal.Location = new System.Drawing.Point(31, 378);
             this.lblSelectCal.Name = "lblSelectCal";
-            this.lblSelectCal.Size = new System.Drawing.Size(142, 17);
+            this.lblSelectCal.Size = new System.Drawing.Size(130, 14);
             this.lblSelectCal.TabIndex = 6;
             this.lblSelectCal.Text = "*select from calendar";
             // 
@@ -289,8 +290,9 @@
             this.txtDateBirth.Location = new System.Drawing.Point(41, 339);
             this.txtDateBirth.Name = "txtDateBirth";
             this.txtDateBirth.ReadOnly = true;
-            this.txtDateBirth.Size = new System.Drawing.Size(122, 27);
+            this.txtDateBirth.Size = new System.Drawing.Size(122, 23);
             this.txtDateBirth.TabIndex = 5;
+            this.txtDateBirth.TextChanged += new System.EventHandler(this.txtDateBirth_TextChanged);
             this.txtDateBirth.Validating += new System.ComponentModel.CancelEventHandler(this.txtDateBirth_Validating);
             // 
             // label1
@@ -302,7 +304,7 @@
             this.label1.Location = new System.Drawing.Point(503, 397);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.Size = new System.Drawing.Size(67, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "*optional";
             // 
@@ -326,7 +328,7 @@
             this.rbFemale.AutoSize = true;
             this.rbFemale.Location = new System.Drawing.Point(257, 252);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(86, 24);
+            this.rbFemale.Size = new System.Drawing.Size(72, 21);
             this.rbFemale.TabIndex = 1;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
@@ -337,7 +339,7 @@
             this.rbMale.AutoSize = true;
             this.rbMale.Location = new System.Drawing.Point(177, 252);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(69, 24);
+            this.rbMale.Size = new System.Drawing.Size(58, 21);
             this.rbMale.TabIndex = 0;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
@@ -360,7 +362,7 @@
             // AddNewUser
             // 
             this.AcceptButton = this.btnSubmit;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::Chat.Properties.Resources.BG_DarkCyan;
