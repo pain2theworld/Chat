@@ -12,8 +12,6 @@ namespace Chat
 {
     public partial class LettersGame : Form
     {
-
-
         Timer timer;
         Timer timerMove;
         LettersDoc lettersDoc;
@@ -121,7 +119,7 @@ namespace Chat
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Profile profil = new Profile (Profile.active,Profile.users);
+            Profile profil = new Profile (Profile.active,Profile.users, true);
             profil.Show();
         }
 

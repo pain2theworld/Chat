@@ -13,7 +13,7 @@ namespace Chat
     public partial class ChatUsers : Form
     {
         public User active;
-        public Dictionary<string, User> users;
+        static public Dictionary<string, User> users;
         public List<User> list;
 
         public ChatUsers()
@@ -39,8 +39,6 @@ namespace Chat
         public void Load_Users()
         {
             lstUsers.Items.Clear();
-            users.Add("Alala", new User("Alala", "ALala La", "pas", "email", "female", "15/12/1985", "I love me."));
-            users.Add("Blala", new User("Blala", "BLala La", "pas", "email", "female", "15/12/1985", "I love me."));
             foreach (User u in users.Values)
                 if (u != active)
                     lstUsers.Items.Add(u.ToString());
@@ -52,13 +50,8 @@ namespace Chat
             lblActiveUser.Text = active.fullname;
         }
 
-        private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
+        public void Load_Messages()
         {
-            lstMessages.Visible = true;
-            txtChat.Visible = true;
-            btnSend.Visible = true;
-            toolTip1.SetToolTip(btnSend, "Send your message");
-            toolTip1.SetToolTip(btnBack, "Back to your profile");
             lstMessages.Items.Clear();
 
             int selected = 0;
@@ -74,16 +67,41 @@ namespace Chat
 
             llblName.Text = list[selected].ToString();
             List<Message> inbox = new List<Message>();
-
             if (active.inbox.TryGetValue(list[selected].username, out inbox))
                 foreach (Message m in inbox)
                     lstMessages.Items.Add(m.ToString());
+        }
+
+        private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstMessages.Visible = true;
+            txtChat.Visible = true;
+            btnSend.Visible = true;
+            llblName.Visible = true;
+            toolTip1.SetToolTip(btnSend, "Send your message");
+            toolTip1.SetToolTip(btnBack, "Back to your profile");
+            Load_Messages();
         }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
             lstMessages.Items.Add(txtChat.Text);
             txtChat.Clear();
+            int selected = 0;
+            foreach (int index in lstUsers.SelectedIndices)
+                selected = index;
+            List<Message> inbox = new List<Message>();
+            if (active.inbox.TryGetValue(list[selected].username, out inbox))
+            {
+                User selectedUser = list[selected];
+                string[] n = active.fullname.Split(' ');
+                Message msg = new Message(n[0], txtChat.Text);
+                if (users.TryGetValue(selectedUser.username, out selectedUser))
+                    selectedUser.AddMessage(active, msg);
+                if (users.TryGetValue(active.username, out active))
+                    active.AddMessage(selectedUser, msg);
+            }
+            Load_Messages();
         }
 
         private void txtChat_KeyDown(object sender, KeyEventArgs e)
@@ -95,7 +113,7 @@ namespace Chat
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Profile profil = new Profile(Profile.active, Profile.users);
+            Profile profil = new Profile(Profile.active, Profile.users, true);
             profil.Show();
         }
 
@@ -118,7 +136,7 @@ namespace Chat
         private void btnFriends_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChatUsers friends = new ChatUsers(active, Form1.users);
+            ChatUsers friends = new ChatUsers(active, users);
             friends.Show();
         }
 
@@ -134,6 +152,16 @@ namespace Chat
             this.Hide();
             Form1 odjava = new Form1();
             odjava.Show();
+        }
+
+        private void llblName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            int selected = 0;
+            foreach (int index in lstUsers.SelectedIndices)
+                selected = index;
+            Profile friend = new Profile(list[selected], Form1.users, false);
+            friend.Show();
         }
     }
 }

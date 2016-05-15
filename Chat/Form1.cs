@@ -37,6 +37,8 @@ namespace Chat
             user_Dajana.AddMessage(user_Viktorija, new Message("Viktorija", "What's up?"));
             users.Add(user_Dajana.username, user_Dajana);
             users.Add(user_Viktorija.username, user_Viktorija);
+            users.Add("bot1", new User("bot1", "Bot Robot", "pas", "email", "male", "15/03/2005", "I love me."));
+            users.Add("bot2", new User("bot2", "Superbot Botovski", "pas", "email", "female", "15/12/1985", "I love me."));
             u = BinaryDeserialize();
         }
 
@@ -104,7 +106,7 @@ namespace Chat
                 else
                 {
                     this.Hide();
-                    form = new Profile(u, users);
+                    form = new Profile(u, users, true);
                     form.Show();
                 }
             }
@@ -118,7 +120,7 @@ namespace Chat
                 // File.OpenRead(path + "\\Sudoku.oku");
                 File.Delete(path + "\\Users.us");
             }
-            catch (Exception e)
+            catch
             {
                 MessageBox.Show("Error!!");
             }

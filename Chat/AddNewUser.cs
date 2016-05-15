@@ -62,7 +62,7 @@ namespace Chat
                 this.DialogResult = DialogResult.OK;
                 user.ChangeAvatar(avatar);
                 BinarySerialize(user);
-                Profile form = new Profile(user, users);
+                Profile form = new Profile(user, users, true);
                 this.Hide();
                 form.Show();
                 Close();

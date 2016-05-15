@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Online", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Offline", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Online", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Offline", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChatUsers));
             this.gbUsers = new System.Windows.Forms.GroupBox();
             this.lstUsers = new System.Windows.Forms.ListView();
@@ -66,13 +66,13 @@
             // 
             this.lstUsers.BackColor = System.Drawing.Color.LightCyan;
             this.lstUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            listViewGroup3.Header = "Online";
-            listViewGroup3.Name = "Online";
-            listViewGroup4.Header = "Offline";
-            listViewGroup4.Name = "Offline";
+            listViewGroup1.Header = "Online";
+            listViewGroup1.Name = "Online";
+            listViewGroup2.Header = "Offline";
+            listViewGroup2.Name = "Offline";
             this.lstUsers.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3,
-            listViewGroup4});
+            listViewGroup1,
+            listViewGroup2});
             this.lstUsers.Location = new System.Drawing.Point(3, 22);
             this.lstUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstUsers.MultiSelect = false;
@@ -116,8 +116,13 @@
             this.llblName.LinkColor = System.Drawing.Color.Aquamarine;
             this.llblName.Location = new System.Drawing.Point(21, 174);
             this.llblName.Name = "llblName";
-            this.llblName.Size = new System.Drawing.Size(0, 24);
+            this.llblName.Size = new System.Drawing.Size(167, 24);
             this.llblName.TabIndex = 15;
+            this.llblName.TabStop = true;
+            this.llblName.Text = "Friend\'s profile";
+            this.llblName.Visible = false;
+            this.llblName.VisitedLinkColor = System.Drawing.Color.White;
+            this.llblName.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblName_LinkClicked);
             // 
             // Logo
             // 

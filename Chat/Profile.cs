@@ -19,18 +19,20 @@ namespace Chat
         public static Dictionary<string, User> users;
         public Dictionary<int, Image> avatar;
         public Random r;
+        public bool edit;
 
         public Profile()
         {
             InitializeComponent();
         }
 
-        public Profile(User u, Dictionary<string, User> all)
+        public Profile(User u, Dictionary<string, User> all, bool edit)
         {
             active = u;
             users = all;
             r = new Random();
             avatar = new Dictionary<int, Image>();
+            this.edit = edit;
             BinarySerialize(active);
             InitializeComponent();
         }
@@ -40,10 +42,13 @@ namespace Chat
             if (AddNewUser.flag)
                 imgAvatar.Image = profilePicture(active.gender, r);
 
+            if (edit) btnEdit.Visible = true;
+            else btnEdit.Visible = false;
+
             toolTip1.SetToolTip(btnGame, "You can play game");
             toolTip1.SetToolTip(btnFriends, "See your friends");
             toolTip1.SetToolTip(btnSignOut, "Sign Out");
-            toolTip1.SetToolTip(edit, "Edit your profile");
+            toolTip1.SetToolTip(btnEdit, "Edit your profile");
 
             string[] parts = active.fullname.Split(' ');
             lblName.Text = parts[0];
@@ -181,7 +186,7 @@ namespace Chat
                 return Chat.Properties.Resources.jarec;
         }
 
-        private void edit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             btnSave.Focus();
             btnSave.Visible = true;
