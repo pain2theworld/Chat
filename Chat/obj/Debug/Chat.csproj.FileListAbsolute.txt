@@ -53,3 +53,6 @@ C:\Users\Riste\Desktop\proektna\Chat\Chat\obj\Debug\Chat.LettersGame.resources
 C:\Users\Riste\Desktop\proektna\Chat\Chat\obj\Debug\Chat.Profile.resources
 C:\Users\Riste\Desktop\proektna\Chat\Chat\obj\Debug\Chat.Properties.Resources.resources
 C:\Users\Riste\Desktop\proektna\Chat\Chat\obj\Debug\Chat.csproj.GenerateResource.Cache
+C:\Users\Riste\Desktop\Chat-fb20228c7d9227e6815cf6fd43a5d65523a41883\Chat-fb20228c7d9227e6815cf6fd43a5d65523a41883\Chat\bin\Debug\Chat.exe.config
+C:\Users\Riste\Desktop\Chat-fb20228c7d9227e6815cf6fd43a5d65523a41883\Chat-fb20228c7d9227e6815cf6fd43a5d65523a41883\Chat\obj\Debug\Chat.exe
+C:\Users\Riste\Desktop\Chat-fb20228c7d9227e6815cf6fd43a5d65523a41883\Chat-fb20228c7d9227e6815cf6fd43a5d65523a41883\Chat\obj\Debug\Chat.pdb
