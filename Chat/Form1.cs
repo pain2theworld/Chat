@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace Chat
 {
@@ -26,7 +27,7 @@ namespace Chat
         {
             txtUsername.Text = "Username";
             txtPassword.Text = "Password";
-
+            u = BinaryDeserialize();
             User user_Dajana = new User("dajana", "Dajana Stojchevska", "lala", "dajana@finki.com", "female", "17/01/1996", "I love chocolates.");
             User user_Viktorija = new User("viki", "Viktorija Velinovska", "viktorija", "viki@hotmail.com", "female", "27/01/1996", "I love rainbow colors.");
             user_Dajana.AddMessage(user_Viktorija, new Message("Dajana", "Hi!"));
@@ -109,6 +110,48 @@ namespace Chat
             }
 
 
+        }
+
+        private static void BinarySerialize(User u)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            try
+            {
+                // File.OpenRead(path + "\\Sudoku.oku");
+                File.Delete(path + "\\Users.us");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error!!");
+            }
+
+            using (FileStream str = File.Create(path + "\\Users.us"))
+            {
+                File.SetAttributes(path + "\\Users,us", File.GetAttributes(path + "\\Users.us") | FileAttributes.Hidden);
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(str, u);
+            }
+        }
+
+        private static User BinaryDeserialize()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            User u = null;
+            try
+            {
+                using (FileStream str = File.OpenRead(path + "\\Users.us"))
+                {
+                    BinaryFormatter bf = new BinaryFormatter();
+                    u = (User)bf.Deserialize(str);
+                }
+                // File.Delete(path + "\\Users.");
+                return u;
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("You don't have any previously saved users");
+                return u;
+            }
         }
 
     }

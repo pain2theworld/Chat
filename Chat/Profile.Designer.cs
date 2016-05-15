@@ -153,7 +153,7 @@
             this.gbContactInfo.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbContactInfo.Location = new System.Drawing.Point(12, 144);
             this.gbContactInfo.Name = "gbContactInfo";
-            this.gbContactInfo.Size = new System.Drawing.Size(287, 50);
+            this.gbContactInfo.Size = new System.Drawing.Size(308, 50);
             this.gbContactInfo.TabIndex = 9;
             this.gbContactInfo.TabStop = false;
             this.gbContactInfo.Text = "Contact Information";
@@ -164,9 +164,9 @@
             this.lblMail.ForeColor = System.Drawing.Color.DarkRed;
             this.lblMail.Location = new System.Drawing.Point(35, 25);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(125, 15);
+            this.lblMail.Size = new System.Drawing.Size(267, 15);
             this.lblMail.TabIndex = 1;
-            this.lblMail.Text = "email@gmail.com";
+            this.lblMail.Text = "email@gmail.com                                              .";
             // 
             // imgMail
             // 

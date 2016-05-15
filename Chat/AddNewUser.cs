@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
 
@@ -15,7 +17,7 @@ namespace Chat
         public string date;
         Dictionary<string, User> users;
         public static string avatar;
-
+        public static bool flag;
         public AddNewUser()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace Chat
 
         private void AddNewUser_Load(object sender, EventArgs e)
         {
+            flag = true;
             mcDateBirth.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             mcDateBirth.ShowToday = false;
             mcDateBirth.ShowTodayCircle = false;
@@ -64,7 +67,7 @@ namespace Chat
                 this.DialogResult = DialogResult.OK;
                 user.ChangeAvatar(avatar);
                 Profile form = new Profile(user, users);
-
+                BinarySerialize(user);
                 this.Hide();
                 form.Show();
                 Close();
@@ -160,6 +163,7 @@ namespace Chat
             if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
             {
                  avatar =openFileDialog1.FileName;
+                flag = false;
             }
         }
 
@@ -171,6 +175,50 @@ namespace Chat
                 CreateParams myCp = base.CreateParams;
                 myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
                 return myCp;
+            }
+        }
+
+
+        private static void BinarySerialize(User u)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            try
+            {
+                // File.OpenRead(path + "\\Sudoku.oku");
+                File.Delete(path + "\\Users.us");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error!!");
+            }
+
+            using (FileStream str = File.Create(path + "\\Users.us"))
+            {
+                File.SetAttributes(path + "\\Users.us", File.GetAttributes(path + "\\Users.us") | FileAttributes.Hidden);
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(str, u);
+            }
+        }
+
+        private static User BinaryDeserialize()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            User u = null;
+            try
+            {
+                using (FileStream str = File.OpenRead(path + "\\Users.us"))
+                {
+                    BinaryFormatter bf = new BinaryFormatter();
+                    u = (User)bf.Deserialize(str);
+                }
+                // File.Delete(path + "\\Users.");
+                return u;
+            }
+
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("You don't have any previously saved users");
+                return u;
             }
         }
     }

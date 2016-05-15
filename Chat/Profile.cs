@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,6 +31,7 @@ namespace Chat
             users = all;
             r = new Random();
             InitializeComponent();
+            BinarySerialize(active);
        
         }
 
@@ -37,7 +40,7 @@ namespace Chat
             lblDateBirth.Text = active.dateBirth;
             avatar = new Dictionary<int, Image>();
 
-            if (active.avatar.Equals(" "))
+            if (AddNewUser.flag)
             {
                 imgAvatar.Image = profilePicture(active.gender, r);
             }
@@ -198,6 +201,7 @@ namespace Chat
 
         private void edit_Click(object sender, EventArgs e)
         {
+            btnSave.Focus();
             btnSave.Visible = true;
             about.ReadOnly = false;
             btnCamera.Visible = true;
@@ -226,7 +230,7 @@ namespace Chat
             {
                 active.ChangeAvatar(openFileDialog1.FileName);
             }
-
+            imgAvatar.Image = null;
             imgAvatar.ImageLocation = active.avatar;
 
         }
@@ -239,6 +243,50 @@ namespace Chat
                 CreateParams myCp = base.CreateParams;
                 myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
                 return myCp;
+            }
+        }
+
+
+        private static void BinarySerialize(User u)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            try
+            {
+                // File.OpenRead(path + "\\Sudoku.oku");
+                File.Delete(path + "\\Users.us");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error!!");
+            }
+
+            using (FileStream str = File.Create(path + "\\Users.us"))
+            {
+                File.SetAttributes(path + "\\Users.us", File.GetAttributes(path + "\\Users.us") | FileAttributes.Hidden);
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(str, u);
+            }
+        }
+
+        private static User BinaryDeserialize()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            User u = null;
+            try
+            {
+                using (FileStream str = File.OpenRead(path + "\\Users.us"))
+                {
+                    BinaryFormatter bf = new BinaryFormatter();
+                    u = (User)bf.Deserialize(str);
+                }
+                // File.Delete(path + "\\Users.");
+                return u;
+            }
+
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("You don't have any previously saved users");
+                return u;
             }
         }
     }
