@@ -13,6 +13,7 @@ namespace Chat
     public partial class ChatUsers : Form
     {
         public User active;
+        public User selected;
         static public Dictionary<string, User> users;
         public List<User> list;
 
@@ -53,21 +54,17 @@ namespace Chat
         public void Load_Messages()
         {
             lstMessages.Items.Clear();
-
-            int selected = 0;
-
-            foreach (int index in lstUsers.SelectedIndices)
-                selected = index;
-
+            
             /* debugging
             foreach (User u in list)
                 if(u!=active)
                 lstMessages.Items.Add(u.ToString());
              */
 
-            llblName.Text = list[selected].ToString();
+            llblName.Text = selected.fullname.ToString();
+
             List<Message> inbox = new List<Message>();
-            if (active.inbox.TryGetValue(list[selected].username, out inbox))
+            if (active.inbox.TryGetValue(selected.username, out inbox))
                 foreach (Message m in inbox)
                     lstMessages.Items.Add(m.ToString());
         }
@@ -80,6 +77,14 @@ namespace Chat
             llblName.Visible = true;
             toolTip1.SetToolTip(btnSend, "Send your message");
             toolTip1.SetToolTip(btnBack, "Back to your profile");
+
+            int select = 0;
+
+            foreach (int index in lstUsers.SelectedIndices)
+                select = index;
+
+            selected = list[select];
+
             Load_Messages();
         }
 
@@ -87,19 +92,15 @@ namespace Chat
         {
             lstMessages.Items.Add(txtChat.Text);
             txtChat.Clear();
-            int selected = 0;
-            foreach (int index in lstUsers.SelectedIndices)
-                selected = index;
             List<Message> inbox = new List<Message>();
-            if (active.inbox.TryGetValue(list[selected].username, out inbox))
+            if (active.inbox.TryGetValue(selected.username, out inbox))
             {
-                User selectedUser = list[selected];
                 string[] n = active.fullname.Split(' ');
                 Message msg = new Message(n[0], txtChat.Text);
-                if (users.TryGetValue(selectedUser.username, out selectedUser))
-                    selectedUser.AddMessage(active, msg);
+                if (users.TryGetValue(selected.username, out selected))
+                    selected.AddMessage(active, msg);
                 if (users.TryGetValue(active.username, out active))
-                    active.AddMessage(selectedUser, msg);
+                    active.AddMessage(selected, msg);
             }
             Load_Messages();
         }
@@ -157,10 +158,7 @@ namespace Chat
         private void llblName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            int selected = 0;
-            foreach (int index in lstUsers.SelectedIndices)
-                selected = index;
-            Profile friend = new Profile(list[selected], Form1.users, false);
+            Profile friend = new Profile(selected, Form1.users, false);
             friend.Show();
         }
     }
