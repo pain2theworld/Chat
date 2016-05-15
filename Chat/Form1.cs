@@ -36,10 +36,14 @@ namespace Chat
             user_Dajana.AddMessage(user_Viktorija, new Message("Viktorija", "Hey"));
             user_Viktorija.AddMessage(user_Dajana, new Message("Viktorija", "What's up?"));
             user_Dajana.AddMessage(user_Viktorija, new Message("Viktorija", "What's up?"));
-            users.Add(user_Dajana.username, user_Dajana);
-            users.Add(user_Viktorija.username, user_Viktorija);
-            users.Add("bot1", new User("bot1", "Bot Robot", "pas", "email", "male", "15/03/2005", "I love me."));
-            users.Add("bot2", new User("bot2", "Superbot Botovski", "pas", "email", "female", "15/12/1985", "I love me."));
+            if (!users.ContainsKey(user_Dajana.username))
+                users.Add(user_Dajana.username, user_Dajana);
+            if (!users.ContainsKey(user_Viktorija.username))
+                users.Add(user_Viktorija.username, user_Viktorija);
+            if (!users.ContainsKey("bot1"))
+                users.Add("bot1", new User("bot1", "Bot Robot", "pas", "email", "male", "15/03/2005", "I love me."));
+            if (!users.ContainsKey("bot2"))
+                users.Add("bot2", new User("bot2", "Superbot Botovski", "pas", "email", "female", "15/12/1985", "I love me."));
         }
 
         private void txtUsername_MouseClick(object sender, MouseEventArgs e)
