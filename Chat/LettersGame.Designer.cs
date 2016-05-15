@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LettersGame));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.labela = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.result = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.play = new System.Windows.Forms.Button();
+            this.pause = new System.Windows.Forms.Button();
+            this.stop = new System.Windows.Forms.Button();
+            this.friends = new System.Windows.Forms.Button();
+            this.profile = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,34 +64,20 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.result);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.play);
+            this.groupBox1.Controls.Add(this.pause);
+            this.groupBox1.Controls.Add(this.stop);
+            this.groupBox1.Controls.Add(this.friends);
+            this.groupBox1.Controls.Add(this.profile);
             this.groupBox1.Font = new System.Drawing.Font("Georgia", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.groupBox1.Location = new System.Drawing.Point(615, 33);
+            this.groupBox1.Location = new System.Drawing.Point(613, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(158, 330);
+            this.groupBox1.Size = new System.Drawing.Size(160, 321);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Font = new System.Drawing.Font("Georgia", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(-29, -8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1225, 38);
-            this.label3.TabIndex = 5;
-            this.label3.Tag = " ";
-            this.label3.Text = resources.GetString("label3.Text");
             // 
             // result
             // 
@@ -102,82 +91,109 @@
             this.result.Text = "label2";
             this.result.Visible = false;
             // 
-            // button5
+            // play
             // 
-            this.button5.BackgroundImage = global::Chat.Properties.Resources.play;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Location = new System.Drawing.Point(49, 261);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(52, 52);
-            this.button5.TabIndex = 4;
-            this.button5.TabStop = false;
-            this.button5.UseMnemonic = false;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.UseWaitCursor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.play.BackgroundImage = global::Chat.Properties.Resources.play;
+            this.play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.play.Location = new System.Drawing.Point(45, 146);
+            this.play.Name = "play";
+            this.play.Size = new System.Drawing.Size(52, 52);
+            this.play.TabIndex = 4;
+            this.play.TabStop = false;
+            this.play.UseMnemonic = false;
+            this.play.UseVisualStyleBackColor = true;
+            this.play.UseWaitCursor = true;
+            this.play.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // pause
             // 
-            this.button4.BackgroundImage = global::Chat.Properties.Resources.pause;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Location = new System.Drawing.Point(80, 204);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(52, 51);
-            this.button4.TabIndex = 3;
-            this.button4.TabStop = false;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.pause.BackgroundImage = global::Chat.Properties.Resources.pause;
+            this.pause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pause.FlatAppearance.BorderSize = 0;
+            this.pause.Location = new System.Drawing.Point(80, 204);
+            this.pause.Name = "pause";
+            this.pause.Size = new System.Drawing.Size(52, 51);
+            this.pause.TabIndex = 3;
+            this.pause.TabStop = false;
+            this.pause.UseVisualStyleBackColor = true;
+            this.pause.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // stop
             // 
-            this.button3.BackgroundImage = global::Chat.Properties.Resources.stop;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(13, 204);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 51);
-            this.button3.TabIndex = 2;
-            this.button3.TabStop = false;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.stop.BackgroundImage = global::Chat.Properties.Resources.stop;
+            this.stop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stop.FlatAppearance.BorderSize = 0;
+            this.stop.Location = new System.Drawing.Point(14, 204);
+            this.stop.Name = "stop";
+            this.stop.Size = new System.Drawing.Size(53, 51);
+            this.stop.TabIndex = 2;
+            this.stop.TabStop = false;
+            this.stop.UseVisualStyleBackColor = true;
+            this.stop.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // friends
             // 
-            this.button2.BackgroundImage = global::Chat.Properties.Resources.friends;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Location = new System.Drawing.Point(80, 35);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 48);
-            this.button2.TabIndex = 1;
-            this.button2.TabStop = false;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.friends.BackgroundImage = global::Chat.Properties.Resources.friends;
+            this.friends.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.friends.FlatAppearance.BorderSize = 0;
+            this.friends.Location = new System.Drawing.Point(80, 35);
+            this.friends.Name = "friends";
+            this.friends.Size = new System.Drawing.Size(52, 48);
+            this.friends.TabIndex = 1;
+            this.friends.TabStop = false;
+            this.friends.UseVisualStyleBackColor = true;
+            this.friends.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // profile
             // 
-            this.button1.BackgroundImage = global::Chat.Properties.Resources.profile;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(14, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 48);
-            this.button1.TabIndex = 0;
-            this.button1.TabStop = false;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.profile.BackgroundImage = global::Chat.Properties.Resources.profile;
+            this.profile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profile.FlatAppearance.BorderSize = 0;
+            this.profile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.profile.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.profile.Location = new System.Drawing.Point(14, 35);
+            this.profile.Name = "profile";
+            this.profile.Size = new System.Drawing.Size(52, 48);
+            this.profile.TabIndex = 0;
+            this.profile.TabStop = false;
+            this.profile.UseVisualStyleBackColor = true;
+            this.profile.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Georgia", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(-29, -8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(2, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Tag = " ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(778, 36);
+            this.label1.TabIndex = 8;
+            this.label1.Text = resources.GetString("label1.Text");
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // LettersGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 379);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximumSize = new System.Drawing.Size(789, 417);
             this.MinimumSize = new System.Drawing.Size(789, 417);
@@ -203,11 +219,13 @@
         private System.Windows.Forms.ToolStripStatusLabel labela;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button profile;
         private System.Windows.Forms.Label result;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button play;
+        private System.Windows.Forms.Button pause;
+        private System.Windows.Forms.Button stop;
+        private System.Windows.Forms.Button friends;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

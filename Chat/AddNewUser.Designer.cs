@@ -55,6 +55,7 @@
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -196,7 +197,8 @@
             // 
             // mcDateBirth
             // 
-            this.mcDateBirth.BackColor = System.Drawing.Color.LemonChiffon;
+            this.mcDateBirth.BackColor = System.Drawing.Color.Orange;
+            this.mcDateBirth.ForeColor = System.Drawing.Color.Maroon;
             this.mcDateBirth.Location = new System.Drawing.Point(189, 315);
             this.mcDateBirth.Name = "mcDateBirth";
             this.mcDateBirth.TabIndex = 5;
@@ -233,6 +235,7 @@
             this.btnChoose.Text = "Choose";
             this.btnChoose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnChoose.UseVisualStyleBackColor = false;
+            this.btnChoose.Click += new System.EventHandler(this.btnChoose_Click);
             // 
             // groupBox1
             // 
@@ -359,6 +362,10 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // AddNewUser
             // 
             this.AcceptButton = this.btnSubmit;
@@ -386,6 +393,8 @@
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(958, 593);
+            this.MinimumSize = new System.Drawing.Size(958, 593);
             this.Name = "AddNewUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
@@ -426,5 +435,6 @@
         private System.Windows.Forms.Label lblSelectCal;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

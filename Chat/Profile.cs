@@ -10,31 +10,39 @@ using System.Windows.Forms;
 
 namespace Chat
 {
-    public partial class picGender : Form
+    public partial class Profile : Form
     {
-        Form1 f1 = new Form1();
-        User active;
-        Dictionary<string, User> users;
+        public Form1 f1 = new Form1();
+        public  static User active;
+        public static Dictionary<string, User> users;
         public Dictionary<int, Image> avatar;
+        public Random r;
 
-        public picGender()
+        public Profile()
         {
             InitializeComponent();
         }
 
-        public picGender(User u, Dictionary<string, User> all)
+        public Profile(User u, Dictionary<string, User> all)
         {
             active = u;
             users = all;
+            r = new Random();
             InitializeComponent();
+       
         }
 
         private void Profile_Load(object sender, EventArgs e)
         {
             lblDateBirth.Text = active.dateBirth;
             avatar = new Dictionary<int, Image>();
-            avatar.Add(1, Chat.Properties.Resources.f_3);
-            imgAvatar.Image = avatar[1];
+
+            if (active.avatar.Equals(" "))
+            {
+                imgAvatar.Image = profilePicture(active.gender, r);
+            }
+
+            imgAvatar.ImageLocation = active.avatar;
             toolTip1.SetToolTip(btnGame, "You can play game");
             toolTip1.SetToolTip(btnFriends, "See your friends");
             toolTip1.SetToolTip(btnSignOut, "Sign Out");
@@ -47,8 +55,10 @@ namespace Chat
             about.Text = active.description;
             parts = active.dateBirth.Split('.');
             lblDateBirth.Text = parts[0] + " " + setMonth(Convert.ToInt32(parts[1]));
-            lblAge.Text =Age(DateTime.Now.ToString(), active.dateBirth).ToString();
-            imgZodiacSign.Image =ZodiacSign(Convert.ToInt32(parts[0]), Convert.ToInt32(parts[1]));
+            lblAge.Text = Age(DateTime.Now.ToString(), active.dateBirth).ToString();
+            imgZodiacSign.Image = ZodiacSign(Convert.ToInt32(parts[0]), Convert.ToInt32(parts[1]));
+            InitializeComponent();
+
         }
 
         private void btnFriends_Click(object sender, EventArgs e)
@@ -190,12 +200,46 @@ namespace Chat
         {
             btnSave.Visible = true;
             about.ReadOnly = false;
+            btnCamera.Visible = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             about.ReadOnly = true;
             btnSave.Visible = false;
+            btnCamera.Visible = false;
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCamera_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                active.ChangeAvatar(openFileDialog1.FileName);
+            }
+
+            imgAvatar.ImageLocation = active.avatar;
+
+        }
+
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
         }
     }
 }

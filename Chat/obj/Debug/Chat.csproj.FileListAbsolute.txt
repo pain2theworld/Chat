@@ -39,4 +39,4 @@ C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.Properties.Resources.reso
 C:\Users\Riste\Desktop\proekt\Chat\Chat\bin\Debug\Chat.exe
 C:\Users\Riste\Desktop\proekt\Chat\Chat\bin\Debug\Chat.pdb
 C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.pdb
-C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.picGender.resources
+C:\Users\Riste\Desktop\proekt\Chat\Chat\obj\Debug\Chat.Profile.resources

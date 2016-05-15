@@ -60,7 +60,7 @@
             this.lblWelcome.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblWelcome.Location = new System.Drawing.Point(84, 151);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(315, 69);
+            this.lblWelcome.Size = new System.Drawing.Size(254, 56);
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Welcome";
             // 
@@ -82,7 +82,7 @@
             this.llblRegister.LinkColor = System.Drawing.Color.DarkCyan;
             this.llblRegister.Location = new System.Drawing.Point(199, 420);
             this.llblRegister.Name = "llblRegister";
-            this.llblRegister.Size = new System.Drawing.Size(84, 24);
+            this.llblRegister.Size = new System.Drawing.Size(67, 18);
             this.llblRegister.TabIndex = 0;
             this.llblRegister.TabStop = true;
             this.llblRegister.Text = "Register";
@@ -93,7 +93,7 @@
             this.txtUsername.ForeColor = System.Drawing.Color.Silver;
             this.txtUsername.Location = new System.Drawing.Point(129, 242);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(224, 30);
+            this.txtUsername.Size = new System.Drawing.Size(224, 26);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUsername_MouseClick);
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
@@ -104,7 +104,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.Silver;
             this.txtPassword.Location = new System.Drawing.Point(129, 294);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(224, 30);
+            this.txtPassword.Size = new System.Drawing.Size(224, 26);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
@@ -112,7 +112,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(482, 470);
@@ -125,6 +125,8 @@
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(498, 508);
+            this.MinimumSize = new System.Drawing.Size(498, 508);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chat";

@@ -1,6 +1,6 @@
 ﻿namespace Chat
 {
-    partial class picGender
+    partial class Profile
     {
         /// <summary>
         /// Required designer variable.
@@ -29,39 +29,41 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(picGender));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
             this.gbMenu = new System.Windows.Forms.GroupBox();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.btnFriends = new System.Windows.Forms.Button();
+            this.btnGame = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.lblSurname = new System.Windows.Forms.Label();
             this.gbContactInfo = new System.Windows.Forms.GroupBox();
             this.lblMail = new System.Windows.Forms.Label();
+            this.imgMail = new System.Windows.Forms.PictureBox();
             this.gbBasicInfo = new System.Windows.Forms.GroupBox();
             this.lblBD = new System.Windows.Forms.Label();
             this.lblDateBirth = new System.Windows.Forms.Label();
+            this.imgGender = new System.Windows.Forms.PictureBox();
             this.lblG = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblA = new System.Windows.Forms.Label();
             this.gbAstro = new System.Windows.Forms.GroupBox();
-            this.gbAbout = new System.Windows.Forms.GroupBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.about = new System.Windows.Forms.TextBox();
-            this.edit = new System.Windows.Forms.Button();
             this.imgZodiacSign = new System.Windows.Forms.PictureBox();
-            this.imgGender = new System.Windows.Forms.PictureBox();
-            this.imgMail = new System.Windows.Forms.PictureBox();
-            this.btnSignOut = new System.Windows.Forms.Button();
-            this.btnFriends = new System.Windows.Forms.Button();
-            this.btnGame = new System.Windows.Forms.Button();
-            this.imgAvatar = new System.Windows.Forms.PictureBox();
+            this.gbAbout = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.about = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.edit = new System.Windows.Forms.Button();
+            this.imgAvatar = new System.Windows.Forms.PictureBox();
+            this.btnCamera = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.gbMenu.SuspendLayout();
             this.gbContactInfo.SuspendLayout();
-            this.gbBasicInfo.SuspendLayout();
-            this.gbAstro.SuspendLayout();
-            this.gbAbout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgZodiacSign)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMail)).BeginInit();
+            this.gbBasicInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGender)).BeginInit();
+            this.gbAstro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgZodiacSign)).BeginInit();
+            this.gbAbout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgAvatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,6 +80,49 @@
             this.gbMenu.TabStop = false;
             this.gbMenu.Text = "Menu";
             // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSignOut.BackgroundImage")));
+            this.btnSignOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.btnSignOut.Location = new System.Drawing.Point(122, 19);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(52, 48);
+            this.btnSignOut.TabIndex = 3;
+            this.btnSignOut.TabStop = false;
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnFriends
+            // 
+            this.btnFriends.BackgroundImage = global::Chat.Properties.Resources.friends;
+            this.btnFriends.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFriends.FlatAppearance.BorderSize = 0;
+            this.btnFriends.Location = new System.Drawing.Point(6, 19);
+            this.btnFriends.Name = "btnFriends";
+            this.btnFriends.Size = new System.Drawing.Size(52, 48);
+            this.btnFriends.TabIndex = 2;
+            this.btnFriends.TabStop = false;
+            this.btnFriends.UseVisualStyleBackColor = true;
+            this.btnFriends.Click += new System.EventHandler(this.btnFriends_Click);
+            // 
+            // btnGame
+            // 
+            this.btnGame.BackgroundImage = global::Chat.Properties.Resources.game;
+            this.btnGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGame.FlatAppearance.BorderSize = 0;
+            this.btnGame.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
+            this.btnGame.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
+            this.btnGame.Location = new System.Drawing.Point(64, 19);
+            this.btnGame.Name = "btnGame";
+            this.btnGame.Size = new System.Drawing.Size(52, 48);
+            this.btnGame.TabIndex = 1;
+            this.btnGame.TabStop = false;
+            this.btnGame.UseVisualStyleBackColor = true;
+            this.btnGame.Click += new System.EventHandler(this.btnGame_Click);
+            // 
             // lblName
             // 
             this.lblName.AutoSize = true;
@@ -85,9 +130,10 @@
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lblName.Location = new System.Drawing.Point(167, 13);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(112, 25);
+            this.lblName.Size = new System.Drawing.Size(22, 25);
             this.lblName.TabIndex = 6;
-            this.lblName.Text = "Viktorija";
+            this.lblName.Text = "*";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // lblSurname
             // 
@@ -96,9 +142,9 @@
             this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lblSurname.Location = new System.Drawing.Point(166, 44);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(133, 25);
+            this.lblSurname.Size = new System.Drawing.Size(22, 25);
             this.lblSurname.TabIndex = 7;
-            this.lblSurname.Text = "Velinovska";
+            this.lblSurname.Text = "*";
             // 
             // gbContactInfo
             // 
@@ -121,6 +167,16 @@
             this.lblMail.Size = new System.Drawing.Size(125, 15);
             this.lblMail.TabIndex = 1;
             this.lblMail.Text = "email@gmail.com";
+            // 
+            // imgMail
+            // 
+            this.imgMail.Image = global::Chat.Properties.Resources.mail;
+            this.imgMail.Location = new System.Drawing.Point(7, 21);
+            this.imgMail.Name = "imgMail";
+            this.imgMail.Size = new System.Drawing.Size(24, 22);
+            this.imgMail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgMail.TabIndex = 0;
+            this.imgMail.TabStop = false;
             // 
             // gbBasicInfo
             // 
@@ -160,6 +216,16 @@
             this.lblDateBirth.Size = new System.Drawing.Size(66, 15);
             this.lblDateBirth.TabIndex = 4;
             this.lblDateBirth.Text = "27 Januari";
+            // 
+            // imgGender
+            // 
+            this.imgGender.Image = global::Chat.Properties.Resources.female;
+            this.imgGender.Location = new System.Drawing.Point(59, 75);
+            this.imgGender.Name = "imgGender";
+            this.imgGender.Size = new System.Drawing.Size(20, 28);
+            this.imgGender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgGender.TabIndex = 3;
+            this.imgGender.TabStop = false;
             // 
             // lblG
             // 
@@ -206,6 +272,16 @@
             this.gbAstro.TabStop = false;
             this.gbAstro.Text = "Astro";
             // 
+            // imgZodiacSign
+            // 
+            this.imgZodiacSign.Image = global::Chat.Properties.Resources.strelec;
+            this.imgZodiacSign.Location = new System.Drawing.Point(14, 23);
+            this.imgZodiacSign.Name = "imgZodiacSign";
+            this.imgZodiacSign.Size = new System.Drawing.Size(70, 72);
+            this.imgZodiacSign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgZodiacSign.TabIndex = 5;
+            this.imgZodiacSign.TabStop = false;
+            // 
             // gbAbout
             // 
             this.gbAbout.Controls.Add(this.btnSave);
@@ -218,6 +294,18 @@
             this.gbAbout.TabIndex = 12;
             this.gbAbout.TabStop = false;
             this.gbAbout.Text = "About";
+            // 
+            // btnSave
+            // 
+            this.btnSave.ForeColor = System.Drawing.Color.Maroon;
+            this.btnSave.Location = new System.Drawing.Point(105, 179);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 1;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // about
             // 
@@ -235,113 +323,50 @@
             this.edit.BackgroundImage = global::Chat.Properties.Resources.edit;
             this.edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.edit.FlatAppearance.BorderSize = 0;
-            this.edit.Location = new System.Drawing.Point(124, 107);
+            this.edit.Location = new System.Drawing.Point(490, 75);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(34, 31);
+            this.edit.Size = new System.Drawing.Size(32, 32);
             this.edit.TabIndex = 1;
             this.edit.UseVisualStyleBackColor = false;
             this.edit.Click += new System.EventHandler(this.edit_Click);
-            // 
-            // imgZodiacSign
-            // 
-            this.imgZodiacSign.Image = global::Chat.Properties.Resources.strelec;
-            this.imgZodiacSign.Location = new System.Drawing.Point(14, 23);
-            this.imgZodiacSign.Name = "imgZodiacSign";
-            this.imgZodiacSign.Size = new System.Drawing.Size(70, 72);
-            this.imgZodiacSign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgZodiacSign.TabIndex = 5;
-            this.imgZodiacSign.TabStop = false;
-            // 
-            // imgGender
-            // 
-            this.imgGender.Image = global::Chat.Properties.Resources.female;
-            this.imgGender.Location = new System.Drawing.Point(59, 75);
-            this.imgGender.Name = "imgGender";
-            this.imgGender.Size = new System.Drawing.Size(20, 28);
-            this.imgGender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgGender.TabIndex = 3;
-            this.imgGender.TabStop = false;
-            // 
-            // imgMail
-            // 
-            this.imgMail.Image = global::Chat.Properties.Resources.mail;
-            this.imgMail.Location = new System.Drawing.Point(7, 21);
-            this.imgMail.Name = "imgMail";
-            this.imgMail.Size = new System.Drawing.Size(24, 22);
-            this.imgMail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgMail.TabIndex = 0;
-            this.imgMail.TabStop = false;
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSignOut.BackgroundImage")));
-            this.btnSignOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSignOut.FlatAppearance.BorderSize = 0;
-            this.btnSignOut.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.btnSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.btnSignOut.Location = new System.Drawing.Point(122, 19);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(52, 48);
-            this.btnSignOut.TabIndex = 3;
-            this.btnSignOut.TabStop = false;
-            this.btnSignOut.UseVisualStyleBackColor = true;
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
-            // 
-            // btnFriends
-            // 
-            this.btnFriends.BackgroundImage = global::Chat.Properties.Resources.friends;
-            this.btnFriends.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFriends.FlatAppearance.BorderSize = 0;
-            this.btnFriends.Location = new System.Drawing.Point(6, 19);
-            this.btnFriends.Name = "btnFriends";
-            this.btnFriends.Size = new System.Drawing.Size(52, 48);
-            this.btnFriends.TabIndex = 2;
-            this.btnFriends.TabStop = false;
-            this.btnFriends.UseVisualStyleBackColor = true;
-            this.btnFriends.Click += new System.EventHandler(this.btnFriends_Click);
-            // 
-            // btnGame
-            // 
-            this.btnGame.BackgroundImage = global::Chat.Properties.Resources.game;
-            this.btnGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGame.FlatAppearance.BorderSize = 0;
-            this.btnGame.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
-            this.btnGame.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.btnGame.Location = new System.Drawing.Point(64, 19);
-            this.btnGame.Name = "btnGame";
-            this.btnGame.Size = new System.Drawing.Size(52, 48);
-            this.btnGame.TabIndex = 1;
-            this.btnGame.TabStop = false;
-            this.btnGame.UseVisualStyleBackColor = true;
-            this.btnGame.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // imgAvatar
             // 
             this.imgAvatar.Image = global::Chat.Properties.Resources.f_4;
             this.imgAvatar.Location = new System.Drawing.Point(12, 2);
+            this.imgAvatar.MaximumSize = new System.Drawing.Size(127, 125);
+            this.imgAvatar.MinimumSize = new System.Drawing.Size(127, 125);
             this.imgAvatar.Name = "imgAvatar";
             this.imgAvatar.Size = new System.Drawing.Size(127, 125);
             this.imgAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgAvatar.TabIndex = 0;
             this.imgAvatar.TabStop = false;
             // 
-            // btnSave
+            // btnCamera
             // 
-            this.btnSave.Location = new System.Drawing.Point(105, 179);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "button1";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Visible = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnCamera.BackColor = System.Drawing.Color.White;
+            this.btnCamera.BackgroundImage = global::Chat.Properties.Resources.camera;
+            this.btnCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCamera.FlatAppearance.BorderSize = 0;
+            this.btnCamera.Location = new System.Drawing.Point(145, 98);
+            this.btnCamera.Name = "btnCamera";
+            this.btnCamera.Size = new System.Drawing.Size(48, 40);
+            this.btnCamera.TabIndex = 13;
+            this.btnCamera.UseVisualStyleBackColor = false;
+            this.btnCamera.Visible = false;
+            this.btnCamera.Click += new System.EventHandler(this.button1_Click);
             // 
-            // picGender
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(528, 355);
+            this.Controls.Add(this.btnCamera);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.gbAbout);
             this.Controls.Add(this.gbAstro);
@@ -352,22 +377,25 @@
             this.Controls.Add(this.gbMenu);
             this.Controls.Add(this.imgAvatar);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "picGender";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(544, 393);
+            this.MinimumSize = new System.Drawing.Size(544, 393);
+            this.Name = "Profile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profile";
             this.Load += new System.EventHandler(this.Profile_Load);
             this.gbMenu.ResumeLayout(false);
             this.gbContactInfo.ResumeLayout(false);
             this.gbContactInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMail)).EndInit();
             this.gbBasicInfo.ResumeLayout(false);
             this.gbBasicInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGender)).EndInit();
             this.gbAstro.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgZodiacSign)).EndInit();
             this.gbAbout.ResumeLayout(false);
             this.gbAbout.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgZodiacSign)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgGender)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -400,5 +428,7 @@
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.TextBox about;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCamera;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

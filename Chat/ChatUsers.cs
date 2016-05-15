@@ -40,6 +40,8 @@ namespace Chat
                 else lstUsers.Items[i].ForeColor = Color.DodgerBlue;
             list = users.Values.OrderBy(o => o.fullname).ToList();
             list.Remove(active);
+            toolTip1.SetToolTip(exit, "Back to your profile ");
+            toolTip1.SetToolTip(btnSend, "Send your message ");
         }
 
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,6 +67,29 @@ namespace Chat
             if (active.inbox.TryGetValue(list[selected].username, out inbox))
                 foreach (Message m in inbox)
                     lstMessages.Items.Add(m.ToString());
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Profile profil = new Profile(Profile.active, Profile.users);
+            profil.Show();
+        }
+
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

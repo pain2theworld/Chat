@@ -7,12 +7,13 @@ using System.Drawing;
 
 namespace Chat
 {
+    [Serializable]
     public enum gender
     {
         male,
         female
     }
-
+    [Serializable]
     public class User
     {
         public string username { get; set; }
@@ -22,7 +23,7 @@ namespace Chat
         public string gender { get; set; }
         public string dateBirth { get; set; }
         public string description { get; set; }
-        public Image avatar { get; set; }
+        public string avatar { get; set; }
         public Dictionary<string, List<Message>> inbox;
 
         public User(string u, string f, string p, string e, string g, string db, string desc)
@@ -34,9 +35,12 @@ namespace Chat
             gender = g;
             dateBirth = db;
             description = desc;
+            avatar = " ";
             inbox = new Dictionary<string, List<Message>>();
         }
 
+
+      
         public void AddMessage(User u, Message m)
         {
             List<Message> existent;
@@ -46,7 +50,7 @@ namespace Chat
                 existent.Add(m);
         }
 
-        public void ChangeAvatar(Image i)
+        public void ChangeAvatar(string i)
         {
             avatar = i;
         }

@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Chat
 {
     public partial class Form1 : Form
     {
-        public Dictionary<string, User> users = new Dictionary<string, User>();
-
+       
+        public static Dictionary<string, User> users = new Dictionary<string, User>();
+        public static User u;
+        public static Profile form;
         public Form1()
         {
             InitializeComponent();
@@ -83,14 +86,14 @@ namespace Chat
 
         private void llblRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
+           
             AddNewUser form = new AddNewUser(users);
             form.Show();
+            this.Hide();
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            User u;
             if (!users.TryGetValue(txtUsername.Text, out u))
                 MessageBox.Show("Username does not exist! Register first.");
             else
@@ -100,7 +103,7 @@ namespace Chat
                 else
                 {
                     this.Hide();
-                    picGender form = new picGender(u, users);
+                    form = new Profile(u, users);
                     form.Show();
                 }
             }

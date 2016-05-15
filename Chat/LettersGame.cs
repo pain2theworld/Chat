@@ -32,7 +32,12 @@ namespace Chat
             timerMove.Tick += timerMove_Tick;
             timer.Start();
             timerMove.Start();
-            flag = true;
+            flag = false;
+            toolTip1.SetToolTip(profile, "back to your profile");
+            toolTip1.SetToolTip(friends, "See your friends");
+            toolTip1.SetToolTip(stop, "Stop your game");
+            toolTip1.SetToolTip(pause, "Pause your game");
+            toolTip1.SetToolTip(play, "Start new game");
         }
 
         void timerMove_Tick(object sender, EventArgs e)
@@ -116,15 +121,26 @@ namespace Chat
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            picGender profil = new picGender();
+            Profile profil = new Profile (Profile.active,Profile.users);
             profil.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChatUsers friends = new ChatUsers();
+            ChatUsers friends = new ChatUsers(Profile.active,Profile.users);
             friends.Show();
+        }
+
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
         }
     }
 }

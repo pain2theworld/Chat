@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Chat
@@ -15,6 +14,7 @@ namespace Chat
         public User user;
         public string date;
         Dictionary<string, User> users;
+        public static string avatar;
 
         public AddNewUser()
         {
@@ -32,7 +32,12 @@ namespace Chat
             mcDateBirth.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             mcDateBirth.ShowToday = false;
             mcDateBirth.ShowTodayCircle = false;
-        }
+            /* Add colors
+            mcDateBirth.TitleBackColor = System.Drawing.Color.Blue;
+            mcDateBirth.TrailingForeColor = System.Drawing.Color.Red;
+            mcDateBirth.TitleForeColor = System.Drawing.Color.Yellow;
+            */
+    }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
@@ -57,7 +62,8 @@ namespace Chat
                 // ako slika uploadedPhoto e uploadirana -> postavi ja za avatar so metodot user.ChangeAvatar(Image uploadedPhoto);
                 users.Add(txtUsername.Text, user);
                 this.DialogResult = DialogResult.OK;
-                picGender form = new picGender(user, users);
+                user.ChangeAvatar(avatar);
+                Profile form = new Profile(user, users);
 
                 this.Hide();
                 form.Show();
@@ -147,6 +153,25 @@ namespace Chat
         private void txtDateBirth_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnChoose_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                 avatar =openFileDialog1.FileName;
+            }
+        }
+
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams myCp = base.CreateParams;
+                myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
+                return myCp;
+            }
         }
     }
 }

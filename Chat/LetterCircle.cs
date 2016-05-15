@@ -34,10 +34,10 @@ namespace Chat
             }
             else
             {
-                g.FillEllipse(Brushes.LightBlue, Center.X - RADIUS, Center.Y - RADIUS, RADIUS * 2, RADIUS * 2);
+                g.FillEllipse(Brushes.LightSkyBlue, Center.X - RADIUS, Center.Y - RADIUS, RADIUS * 2, RADIUS * 2);
             }
             Font f = new Font("Arial", 24);
-            g.DrawString(string.Format("{0}", Letter), f, Brushes.Black, Center.X - 16, Center.Y - 15);
+            g.DrawString(string.Format("{0}", Letter), f, Brushes.Black, Center.X -15, Center.Y -17);
             f.Dispose();
         }
 
