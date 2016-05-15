@@ -54,13 +54,6 @@ namespace Chat
         public void Load_Messages()
         {
             lstMessages.Items.Clear();
-            
-            /* debugging
-            foreach (User u in list)
-                if(u!=active)
-                lstMessages.Items.Add(u.ToString());
-             */
-
             List<Message> inbox = new List<Message>();
             if (active.inbox.TryGetValue(selected.username, out inbox))
                 foreach (Message m in inbox)
@@ -81,9 +74,7 @@ namespace Chat
                 select = index;
 
             selected = list[select];
-
             llblName.Text = selected.fullname.ToString();
-
             Load_Messages();
         }
 
@@ -112,7 +103,8 @@ namespace Chat
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Profile profil = new Profile(Profile.active, Profile.users, true);
+            // Profile profil = new Profile(Profile.active, Profile.users, true);
+            Profile profil = new Profile(Profile.active, Profile.users);
             profil.Show();
         }
 
@@ -155,9 +147,9 @@ namespace Chat
 
         private void llblName_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide();
-            Profile friend = new Profile(selected, Form1.users, false);
-            friend.Show();
+            //this.Hide();
+            //Profile friend = new Profile(selected, Form1.users, false);
+            //friend.Show();
         }
     }
 }

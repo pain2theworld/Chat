@@ -61,7 +61,8 @@ namespace Chat
                 users.Add(txtUsername.Text, user);
                 this.DialogResult = DialogResult.OK;
                 user.ChangeAvatar(avatar);
-                Profile form = new Profile(user, users, true);
+                // Profile form = new Profile(user, users, true);
+                Profile form = new Profile(user, users);
                 this.Hide();
                 form.Show();
                 Close();

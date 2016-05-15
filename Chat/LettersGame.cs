@@ -57,28 +57,10 @@ namespace Chat
 
         }
 
-
-        private void LettersGame_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-
-
         private void LettersGame_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.Clear(Color.White);
             lettersDoc.Draw(e.Graphics);
-        }
-
-        private void LettersGame_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void LettersGame_KeyPress(object sender, KeyPressEventArgs e)
@@ -86,7 +68,6 @@ namespace Chat
             lettersDoc.Hit(e.KeyChar);
             Invalidate(true);
             labela.Text = string.Format("Points: {0}, Missed: {1}", lettersDoc.Points, lettersDoc.Misses);
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -119,7 +100,8 @@ namespace Chat
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Profile profil = new Profile (Profile.active,Profile.users, true);
+            // Profile profil = new Profile (Profile.active,Profile.users, true);
+            Profile profil = new Profile(Profile.active, Profile.users);
             profil.Show();
         }
 

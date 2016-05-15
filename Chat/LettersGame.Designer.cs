@@ -77,7 +77,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // result
             // 
@@ -201,7 +200,6 @@
             this.Padding = new System.Windows.Forms.Padding(0, 40, 0, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LettersGame";
-            this.Load += new System.EventHandler(this.LettersGame_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.LettersGame_Paint);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LettersGame_KeyPress);
             this.statusStrip1.ResumeLayout(false);

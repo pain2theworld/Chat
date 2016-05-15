@@ -18,20 +18,20 @@ namespace Chat
         public static Dictionary<string, User> users;
         public Dictionary<int, Image> avatar;
         public Random r;
-        public bool edit;
+        // public bool edit;
 
         public Profile()
         {
             InitializeComponent();
         }
 
-        public Profile(User u, Dictionary<string, User> all, bool edit)
+        public Profile(User u, Dictionary<string, User> all)
         {
             active = u;
             users = all;
             r = new Random();
             avatar = new Dictionary<int, Image>();
-            this.edit = edit;
+            // this.edit = edit;
             InitializeComponent();
         }
 
@@ -40,8 +40,8 @@ namespace Chat
             if (AddNewUser.flag)
                 imgAvatar.Image = profilePicture(active.gender, r);
 
-            if (edit) btnEdit.Visible = true;
-            else btnEdit.Visible = false;
+            // if (edit) btnEdit.Visible = true;
+            // else btnEdit.Visible = false;
 
             toolTip1.SetToolTip(btnGame, "You can play game");
             toolTip1.SetToolTip(btnFriends, "See your friends");
@@ -51,15 +51,15 @@ namespace Chat
             string[] parts = active.fullname.Split(' ');
             lblName.Text = parts[0];
             string surname = parts[1];
-                for (int i = 2; i < parts.Length; i++)
-                    surname += " " + parts[i];
+            for (int i = 2; i < parts.Length; i++)
+                surname += " " + parts[i];
             lblSurname.Text = surname;
             imgAvatar.ImageLocation = active.avatar;
             about.Text = active.description;
             lblMail.Text = active.email;
             imgGender.Image = setGenderImage(active.gender);
             lblAge.Text = Age(active.dateBirth);
-            parts = active.dateBirth.Split('/' , '.');
+            parts = active.dateBirth.Split('/', '.');
             lblDateBirth.Text = parts[0] + " " + setMonth(int.Parse(parts[1]));
             imgZodiacSign.Image = ZodiacSign(int.Parse(parts[0]), int.Parse(parts[1]));
         }
@@ -202,9 +202,7 @@ namespace Chat
         private void btnCamera_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
-            {
                 active.ChangeAvatar(openFileDialog1.FileName);
-            }
             imgAvatar.Image = null;
             imgAvatar.ImageLocation = active.avatar;
         }
@@ -219,10 +217,5 @@ namespace Chat
                 return myCp;
             }
         }
-
-
-    
-
-      
     }
 }
