@@ -49,8 +49,8 @@ namespace Chat
             string[] parts = active.fullname.Split(' ');
             lblName.Text = parts[0];
             string surname = parts[1];
-            for (int i = 2; i < parts.Length; i++)
-                surname += " " + parts[i];
+                for (int i = 2; i < parts.Length; i++)
+                    surname += " " + parts[i];
             lblSurname.Text = surname;
             imgAvatar.ImageLocation = active.avatar;
             about.Text = active.description;

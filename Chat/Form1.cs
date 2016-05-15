@@ -31,10 +31,10 @@ namespace Chat
             User user_Viktorija = new User("viki", "Viktorija Velinovska", "viktorija", "viki@hotmail.com", "female", "27/01/1996", "I love rainbow colors.");
             user_Dajana.AddMessage(user_Viktorija, new Message("Dajana", "Hi!"));
             user_Viktorija.AddMessage(user_Dajana, new Message("Dajana", "Hi!"));
-            user_Viktorija.AddMessage(user_Dajana, new Message("viki", "Hey"));
-            user_Dajana.AddMessage(user_Viktorija, new Message("viki", "Hey"));
-            user_Viktorija.AddMessage(user_Dajana, new Message("viki", "What's up?"));
-            user_Dajana.AddMessage(user_Viktorija, new Message("viki", "What's up?"));
+            user_Viktorija.AddMessage(user_Dajana, new Message("Viktorija", "Hey"));
+            user_Dajana.AddMessage(user_Viktorija, new Message("Viktorija", "Hey"));
+            user_Viktorija.AddMessage(user_Dajana, new Message("Viktorija", "What's up?"));
+            user_Dajana.AddMessage(user_Viktorija, new Message("Viktorija", "What's up?"));
             users.Add(user_Dajana.username, user_Dajana);
             users.Add(user_Viktorija.username, user_Viktorija);
             u = BinaryDeserialize();

@@ -52,7 +52,7 @@ namespace Chat
             txtEmail.Focus();
             mcDateBirth.Focus();
             txtAboutMe.Focus();
-            if (txtUsername.Text.Trim().Length > 0 && !users.ContainsKey(txtUsername.Text) && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
+            if (txtUsername.Text.Trim().Length > 0 && !users.ContainsKey(txtUsername.Text) && txtFullName.Text.Trim().Length > 0 && txtFullName.Text.Split(' ').Length > 1 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
             {
                 string g;
                 if (rbMale.Checked) g = gender.male.ToString();
@@ -101,7 +101,16 @@ namespace Chat
                 errorProvider1.SetError(txtFullName, "FullName field can not be empty!");
             }
             else
-                errorProvider1.SetError(txtFullName, null);
+            {
+                string[] parts = txtFullName.Text.Split(' ');
+                if (parts.Length < 2)
+                {
+                    e.Cancel = true;
+                    errorProvider1.SetError(txtFullName, "Enter name and surname!");
+                }
+                else
+                    errorProvider1.SetError(txtFullName, null);
+            }
         }
 
         private void txtPassword_Validating(object sender, CancelEventArgs e)

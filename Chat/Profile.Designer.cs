@@ -146,7 +146,7 @@
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblSurname.Location = new System.Drawing.Point(221, 54);
+            this.lblSurname.Location = new System.Drawing.Point(223, 53);
             this.lblSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(27, 31);
@@ -174,9 +174,9 @@
             this.lblMail.Location = new System.Drawing.Point(47, 31);
             this.lblMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(333, 18);
+            this.lblMail.Size = new System.Drawing.Size(144, 18);
             this.lblMail.TabIndex = 1;
-            this.lblMail.Text = "email@gmail.com                                              .";
+            this.lblMail.Text = "email@gmail.com";
             // 
             // imgMail
             // 
