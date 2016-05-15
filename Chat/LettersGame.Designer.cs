@@ -95,7 +95,7 @@
             // 
             this.play.BackgroundImage = global::Chat.Properties.Resources.play;
             this.play.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.play.Location = new System.Drawing.Point(45, 146);
+            this.play.Location = new System.Drawing.Point(49, 260);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(52, 52);
             this.play.TabIndex = 4;

@@ -14,7 +14,6 @@ namespace Chat
 {
     public partial class Profile : Form
     {
-        public Form1 f1 = new Form1();
         public static User active;
         public static Dictionary<string, User> users;
         public Dictionary<int, Image> avatar;
