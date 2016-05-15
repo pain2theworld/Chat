@@ -39,7 +39,7 @@ namespace Chat
             users.Add(user_Viktorija.username, user_Viktorija);
             users.Add("bot1", new User("bot1", "Bot Robot", "pas", "email", "male", "15/03/2005", "I love me."));
             users.Add("bot2", new User("bot2", "Superbot Botovski", "pas", "email", "female", "15/12/1985", "I love me."));
-            u = BinaryDeserialize();
+          
         }
 
         private void txtUsername_MouseClick(object sender, MouseEventArgs e)
@@ -112,46 +112,5 @@ namespace Chat
             }
         }
 
-        private static void BinarySerialize(User u)
-        {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            try
-            {
-                // File.OpenRead(path + "\\Sudoku.oku");
-                File.Delete(path + "\\Users.us");
-            }
-            catch
-            {
-                MessageBox.Show("Error!!");
-            }
-
-            using (FileStream str = File.Create(path + "\\Users.us"))
-            {
-                File.SetAttributes(path + "\\Users,us", File.GetAttributes(path + "\\Users.us") | FileAttributes.Hidden);
-                BinaryFormatter bf = new BinaryFormatter();
-                bf.Serialize(str, u);
-            }
-        }
-
-        private static User BinaryDeserialize()
-        {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            User u = null;
-            try
-            {
-                using (FileStream str = File.OpenRead(path + "\\Users.us"))
-                {
-                    BinaryFormatter bf = new BinaryFormatter();
-                    u = (User)bf.Deserialize(str);
-                }
-                // File.Delete(path + "\\Users.");
-                return u;
-            }
-            catch (FileNotFoundException)
-            {
-                MessageBox.Show("You don't have any previously saved users");
-                return u;
-            }
-        }
     }
 }

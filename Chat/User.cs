@@ -7,14 +7,14 @@ using System.Drawing;
 
 namespace Chat
 {
-    [Serializable]
+    
     public enum gender
     {
         male,
         female
     }
 
-    [Serializable]
+   
     public class User
     {
         public string username { get; set; }

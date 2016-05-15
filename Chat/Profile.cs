@@ -33,7 +33,6 @@ namespace Chat
             r = new Random();
             avatar = new Dictionary<int, Image>();
             this.edit = edit;
-            BinarySerialize(active);
             InitializeComponent();
         }
 
@@ -223,47 +222,8 @@ namespace Chat
         }
 
 
-        private static void BinarySerialize(User u)
-        {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            try
-            {
-                // File.OpenRead(path + "\\Sudoku.oku");
-                File.Delete(path + "\\Users.us");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error!!");
-            }
+    
 
-            using (FileStream str = File.Create(path + "\\Users.us"))
-            {
-                File.SetAttributes(path + "\\Users.us", File.GetAttributes(path + "\\Users.us") | FileAttributes.Hidden);
-                BinaryFormatter bf = new BinaryFormatter();
-                //bf.Serialize(str, u);
-            }
-        }
-
-        private static User BinaryDeserialize()
-        {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            User u = null;
-            try
-            {
-                using (FileStream str = File.OpenRead(path + "\\Users.us"))
-                {
-                    BinaryFormatter bf = new BinaryFormatter();
-                    u = (User)bf.Deserialize(str);
-                }
-                // File.Delete(path + "\\Users.");
-                return u;
-            }
-
-            catch (FileNotFoundException)
-            {
-                MessageBox.Show("You don't have any previously saved users");
-                return u;
-            }
-        }
+      
     }
 }
