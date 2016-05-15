@@ -61,8 +61,6 @@ namespace Chat
                 lstMessages.Items.Add(u.ToString());
              */
 
-            llblName.Text = selected.fullname.ToString();
-
             List<Message> inbox = new List<Message>();
             if (active.inbox.TryGetValue(selected.username, out inbox))
                 foreach (Message m in inbox)
@@ -79,11 +77,12 @@ namespace Chat
             toolTip1.SetToolTip(btnBack, "Back to your profile");
 
             int select = 0;
-
             foreach (int index in lstUsers.SelectedIndices)
                 select = index;
 
             selected = list[select];
+
+            llblName.Text = selected.fullname.ToString();
 
             Load_Messages();
         }
@@ -91,18 +90,17 @@ namespace Chat
         private void btnSend_Click(object sender, EventArgs e)
         {
             lstMessages.Items.Add(txtChat.Text);
-            txtChat.Clear();
-            List<Message> inbox = new List<Message>();
-            if (active.inbox.TryGetValue(selected.username, out inbox))
-            {
-                string[] n = active.fullname.Split(' ');
-                Message msg = new Message(n[0], txtChat.Text);
-                if (users.TryGetValue(selected.username, out selected))
-                    selected.AddMessage(active, msg);
-                if (users.TryGetValue(active.username, out active))
-                    active.AddMessage(selected, msg);
-            }
+            List<Message> inbox;
+            if (!active.inbox.TryGetValue(selected.username, out inbox))
+                inbox = new List<Message>();
+            string[] n = active.fullname.Split(' ');
+            Message msg = new Message(n[0], txtChat.Text);
+            if (users.TryGetValue(selected.username, out selected))
+                selected.AddMessage(active, msg);
+            if (users.TryGetValue(active.username, out active))
+                active.AddMessage(selected, msg);
             Load_Messages();
+            txtChat.Clear();
         }
 
         private void txtChat_KeyDown(object sender, KeyEventArgs e)
