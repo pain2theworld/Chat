@@ -14,10 +14,10 @@ namespace Chat
 {
     public partial class Form1 : Form
     {
-       
         public static Dictionary<string, User> users = new Dictionary<string, User>();
         public static User u;
         public static Profile form;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,7 +27,6 @@ namespace Chat
         {
             txtUsername.Text = "Username";
             txtPassword.Text = "Password";
-            u = BinaryDeserialize();
             User user_Dajana = new User("dajana", "Dajana Stojchevska", "lala", "dajana@finki.com", "female", "17/01/1996", "I love chocolates.");
             User user_Viktorija = new User("viki", "Viktorija Velinovska", "viktorija", "viki@hotmail.com", "female", "27/01/1996", "I love rainbow colors.");
             user_Dajana.AddMessage(user_Viktorija, new Message("Dajana", "Hi!"));
@@ -38,6 +37,7 @@ namespace Chat
             user_Dajana.AddMessage(user_Viktorija, new Message("viki", "What's up?"));
             users.Add(user_Dajana.username, user_Dajana);
             users.Add(user_Viktorija.username, user_Viktorija);
+            u = BinaryDeserialize();
         }
 
         private void txtUsername_MouseClick(object sender, MouseEventArgs e)
@@ -87,7 +87,7 @@ namespace Chat
 
         private void llblRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           
+
             AddNewUser form = new AddNewUser(users);
             form.Show();
             this.Hide();
@@ -108,8 +108,6 @@ namespace Chat
                     form.Show();
                 }
             }
-
-
         }
 
         private static void BinarySerialize(User u)
@@ -153,6 +151,5 @@ namespace Chat
                 return u;
             }
         }
-
     }
 }

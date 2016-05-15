@@ -13,6 +13,7 @@ namespace Chat
         male,
         female
     }
+
     [Serializable]
     public class User
     {
@@ -39,8 +40,6 @@ namespace Chat
             inbox = new Dictionary<string, List<Message>>();
         }
 
-
-      
         public void AddMessage(User u, Message m)
         {
             List<Message> existent;

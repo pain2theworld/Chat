@@ -35,17 +35,14 @@ namespace Chat
         public void Draw(Graphics g)
         {
             foreach (LetterCircle lc in Letters)
-            {
                 lc.Draw(g);
-            }
         }
 
         public void Move()
         {
             foreach (LetterCircle lc in Letters)
-            {
                 lc.Move();
-            }
+
             for (int i = Letters.Count - 1; i >= 0; --i)
             {
                 LetterCircle l = Letters[i];
@@ -56,23 +53,19 @@ namespace Chat
                 }
                 else
                     if (l.IsHit)
-                    {
                         Letters.RemoveAt(i);
-                    }
             }
         }
 
         public void Hit(char c)
         {
             foreach (LetterCircle lc in Letters)
-            {
                 if (lc.Letter == Char.ToUpper(c))
                 {
                     Points++;
                     lc.IsHit = true;
                     break;
                 }
-            }
         }
     }
 }

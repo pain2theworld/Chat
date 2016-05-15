@@ -15,7 +15,7 @@ namespace Chat
     public partial class Profile : Form
     {
         public Form1 f1 = new Form1();
-        public  static User active;
+        public static User active;
         public static Dictionary<string, User> users;
         public Dictionary<int, Image> avatar;
         public Random r;
@@ -30,38 +30,38 @@ namespace Chat
             active = u;
             users = all;
             r = new Random();
+            avatar = new Dictionary<int, Image>();
             InitializeComponent();
             BinarySerialize(active);
-       
+
         }
 
         private void Profile_Load(object sender, EventArgs e)
         {
-            lblDateBirth.Text = active.dateBirth;
-            avatar = new Dictionary<int, Image>();
-
             if (AddNewUser.flag)
-            {
                 imgAvatar.Image = profilePicture(active.gender, r);
-            }
 
-            imgAvatar.ImageLocation = active.avatar;
             toolTip1.SetToolTip(btnGame, "You can play game");
             toolTip1.SetToolTip(btnFriends, "See your friends");
             toolTip1.SetToolTip(btnSignOut, "Sign Out");
             toolTip1.SetToolTip(edit, "Edit your profile");
+
             string[] parts = active.fullname.Split(' ');
             lblName.Text = parts[0];
-            lblSurname.Text = parts[1];
-            imgGender.Image = setGenderImage(active.gender);
-            lblMail.Text = active.email;
+            string surname = parts[1];
+            for (int i = 2; i < parts.Length; i++)
+                surname += " " + parts[i];
+            lblSurname.Text = surname;
+            imgAvatar.ImageLocation = active.avatar;
             about.Text = active.description;
-            parts = active.dateBirth.Split('.');
+            lblMail.Text = active.email;
+            imgGender.Image = setGenderImage(active.gender);
+            lblAge.Text = Age(active.dateBirth);
+            parts = active.dateBirth.Split('/');
             lblDateBirth.Text = parts[0] + " " + setMonth(Convert.ToInt32(parts[1]));
-            lblAge.Text = Age(DateTime.Now.ToString(), active.dateBirth).ToString();
             imgZodiacSign.Image = ZodiacSign(Convert.ToInt32(parts[0]), Convert.ToInt32(parts[1]));
             InitializeComponent();
-
+        
         }
 
         private void btnFriends_Click(object sender, EventArgs e)
@@ -145,28 +145,19 @@ namespace Chat
                 return "December";
         }
 
-        public int Age(string today, string birthday)
-            {
-            string[] parts = today.Split(' ');
-            string[] now = parts[0].Split('.');
-            string[] birth = birthday.Split('.');
-            if (Convert.ToInt32(now[1]) > Convert.ToInt32(birth[1]))
-                return Convert.ToInt32(now[2]) - Convert.ToInt32(birth[2]);
-           else if (Convert.ToInt32(now[1]) < Convert.ToInt32(birth[1]))
-                return Convert.ToInt32(now[2]) - Convert.ToInt32(birth[2])-1;
-            else
-            {
-                if (Convert.ToInt32(now[0]) >= Convert.ToInt32(birth[0]))
-                    return Convert.ToInt32(now[2]) - Convert.ToInt32(birth[2]);
-
-                return Convert.ToInt32(now[2]) - Convert.ToInt32(birth[2]) - 1; ;
-            }
-
+        public string Age(string birthday)
+        {
+            DateTime today = DateTime.Today;
+            DateTime bday = DateTime.Parse(birthday);
+            int age = today.Year - bday.Year;
+            if (bday > today.AddYears(-age))
+                age--;
+            return age.ToString();
         }
 
         public Image ZodiacSign(int day, int m)
         {
-          
+
             if ((day >= 20 && m == 1) || (day <= 18 && m == 2))
                 return Chat.Properties.Resources.vodolija;
             else if ((day >= 19 && m == 2) || (day <= 20 && m == 3))
@@ -264,7 +255,7 @@ namespace Chat
             {
                 File.SetAttributes(path + "\\Users.us", File.GetAttributes(path + "\\Users.us") | FileAttributes.Hidden);
                 BinaryFormatter bf = new BinaryFormatter();
-                bf.Serialize(str, u);
+                //bf.Serialize(str, u);
             }
         }
 

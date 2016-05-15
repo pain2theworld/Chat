@@ -10,9 +10,8 @@ namespace Chat
     public class LetterCircle
     {
         public static readonly int RADIUS = 26;
-        public char Letter { get; set; }
-
         public Point Center { get; set; }
+        public char Letter { get; set; }
         private int Height;
         public bool IsHit { get; set; }
 
@@ -29,15 +28,13 @@ namespace Chat
         public void Draw(Graphics g)
         {
             if (IsHit)
-            {
                 g.FillEllipse(Brushes.DarkRed, Center.X - RADIUS, Center.Y - RADIUS, RADIUS * 2, RADIUS * 2);
-            }
+
             else
-            {
                 g.FillEllipse(Brushes.LightSkyBlue, Center.X - RADIUS, Center.Y - RADIUS, RADIUS * 2, RADIUS * 2);
-            }
+
             Font f = new Font("Arial", 24);
-            g.DrawString(string.Format("{0}", Letter), f, Brushes.Black, Center.X -15, Center.Y -17);
+            g.DrawString(string.Format("{0}", Letter), f, Brushes.Black, Center.X - 15, Center.Y - 17);
             f.Dispose();
         }
 

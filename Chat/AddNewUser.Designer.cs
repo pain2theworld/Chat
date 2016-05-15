@@ -202,7 +202,7 @@
             this.mcDateBirth.Location = new System.Drawing.Point(189, 315);
             this.mcDateBirth.Name = "mcDateBirth";
             this.mcDateBirth.TabIndex = 5;
-            this.mcDateBirth.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            this.mcDateBirth.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.mcDateBirth_DateSelected);
             // 
             // lblPhoto
             // 
@@ -295,7 +295,6 @@
             this.txtDateBirth.ReadOnly = true;
             this.txtDateBirth.Size = new System.Drawing.Size(122, 23);
             this.txtDateBirth.TabIndex = 5;
-            this.txtDateBirth.TextChanged += new System.EventHandler(this.txtDateBirth_TextChanged);
             this.txtDateBirth.Validating += new System.ComponentModel.CancelEventHandler(this.txtDateBirth_Validating);
             // 
             // label1

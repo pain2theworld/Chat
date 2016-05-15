@@ -18,6 +18,7 @@ namespace Chat
         Dictionary<string, User> users;
         public static string avatar;
         public static bool flag;
+
         public AddNewUser()
         {
             InitializeComponent();
@@ -35,14 +36,9 @@ namespace Chat
             mcDateBirth.MaxDate = new System.DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
             mcDateBirth.ShowToday = false;
             mcDateBirth.ShowTodayCircle = false;
-            /* Add colors
-            mcDateBirth.TitleBackColor = System.Drawing.Color.Blue;
-            mcDateBirth.TrailingForeColor = System.Drawing.Color.Red;
-            mcDateBirth.TitleForeColor = System.Drawing.Color.Yellow;
-            */
-    }
+        }
 
-        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        private void mcDateBirth_DateSelected(object sender, DateRangeEventArgs e)
         {
             date = e.Start.ToShortDateString();
             txtDateBirth.Text = date.ToString();
@@ -59,19 +55,18 @@ namespace Chat
             if (txtUsername.Text.Trim().Length > 0 && !users.ContainsKey(txtUsername.Text) && txtFullName.Text.Trim().Length > 0 && txtPassword.Text.Trim().Length > 0 && txtEmail.Text.Trim().Length > 0 && txtDateBirth.Text.Trim().Length > 0 && txtAboutMe.Text.Trim().Length > 0)
             {
                 string g;
-                if(rbMale.Checked) g = gender.male.ToString();
+                if (rbMale.Checked) g = gender.male.ToString();
                 else g = gender.female.ToString();
                 user = new User(txtUsername.Text, txtFullName.Text, txtPassword.Text, txtEmail.Text, g, txtDateBirth.Text, txtAboutMe.Text);
-                // ako slika uploadedPhoto e uploadirana -> postavi ja za avatar so metodot user.ChangeAvatar(Image uploadedPhoto);
                 users.Add(txtUsername.Text, user);
                 this.DialogResult = DialogResult.OK;
                 user.ChangeAvatar(avatar);
-                Profile form = new Profile(user, users);
                 BinarySerialize(user);
+                Profile form = new Profile(user, users);
                 this.Hide();
                 form.Show();
                 Close();
-            } 
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -95,7 +90,7 @@ namespace Chat
             }
             else
                 errorProvider1.SetError(txtUsername, null);
-            
+
         }
 
         private void txtFullName_Validating(object sender, CancelEventArgs e)
@@ -153,16 +148,11 @@ namespace Chat
                 errorProvider1.SetError(txtAboutMe, null);
         }
 
-        private void txtDateBirth_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnChoose_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
             {
-                 avatar =openFileDialog1.FileName;
+                avatar = openFileDialog1.FileName;
                 flag = false;
             }
         }
@@ -177,7 +167,6 @@ namespace Chat
                 return myCp;
             }
         }
-
 
         private static void BinarySerialize(User u)
         {

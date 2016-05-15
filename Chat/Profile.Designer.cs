@@ -73,9 +73,11 @@
             this.gbMenu.Controls.Add(this.btnFriends);
             this.gbMenu.Controls.Add(this.btnGame);
             this.gbMenu.Font = new System.Drawing.Font("Georgia", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbMenu.Location = new System.Drawing.Point(339, 2);
+            this.gbMenu.Location = new System.Drawing.Point(452, 2);
+            this.gbMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbMenu.Name = "gbMenu";
-            this.gbMenu.Size = new System.Drawing.Size(183, 80);
+            this.gbMenu.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMenu.Size = new System.Drawing.Size(244, 98);
             this.gbMenu.TabIndex = 3;
             this.gbMenu.TabStop = false;
             this.gbMenu.Text = "Menu";
@@ -87,9 +89,10 @@
             this.btnSignOut.FlatAppearance.BorderSize = 0;
             this.btnSignOut.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
             this.btnSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.btnSignOut.Location = new System.Drawing.Point(122, 19);
+            this.btnSignOut.Location = new System.Drawing.Point(163, 23);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(52, 48);
+            this.btnSignOut.Size = new System.Drawing.Size(69, 59);
             this.btnSignOut.TabIndex = 3;
             this.btnSignOut.TabStop = false;
             this.btnSignOut.UseVisualStyleBackColor = true;
@@ -100,9 +103,10 @@
             this.btnFriends.BackgroundImage = global::Chat.Properties.Resources.friends;
             this.btnFriends.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFriends.FlatAppearance.BorderSize = 0;
-            this.btnFriends.Location = new System.Drawing.Point(6, 19);
+            this.btnFriends.Location = new System.Drawing.Point(8, 23);
+            this.btnFriends.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFriends.Name = "btnFriends";
-            this.btnFriends.Size = new System.Drawing.Size(52, 48);
+            this.btnFriends.Size = new System.Drawing.Size(69, 59);
             this.btnFriends.TabIndex = 2;
             this.btnFriends.TabStop = false;
             this.btnFriends.UseVisualStyleBackColor = true;
@@ -115,9 +119,10 @@
             this.btnGame.FlatAppearance.BorderSize = 0;
             this.btnGame.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
             this.btnGame.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.btnGame.Location = new System.Drawing.Point(64, 19);
+            this.btnGame.Location = new System.Drawing.Point(85, 23);
+            this.btnGame.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGame.Name = "btnGame";
-            this.btnGame.Size = new System.Drawing.Size(52, 48);
+            this.btnGame.Size = new System.Drawing.Size(69, 59);
             this.btnGame.TabIndex = 1;
             this.btnGame.TabStop = false;
             this.btnGame.UseVisualStyleBackColor = true;
@@ -128,9 +133,10 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblName.Location = new System.Drawing.Point(167, 13);
+            this.lblName.Location = new System.Drawing.Point(223, 16);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(22, 25);
+            this.lblName.Size = new System.Drawing.Size(27, 31);
             this.lblName.TabIndex = 6;
             this.lblName.Text = "*";
             this.lblName.Click += new System.EventHandler(this.lblName_Click);
@@ -140,9 +146,10 @@
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblSurname.Location = new System.Drawing.Point(166, 44);
+            this.lblSurname.Location = new System.Drawing.Point(221, 54);
+            this.lblSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(22, 25);
+            this.lblSurname.Size = new System.Drawing.Size(27, 31);
             this.lblSurname.TabIndex = 7;
             this.lblSurname.Text = "*";
             // 
@@ -151,9 +158,11 @@
             this.gbContactInfo.Controls.Add(this.lblMail);
             this.gbContactInfo.Controls.Add(this.imgMail);
             this.gbContactInfo.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.gbContactInfo.Location = new System.Drawing.Point(12, 144);
+            this.gbContactInfo.Location = new System.Drawing.Point(16, 177);
+            this.gbContactInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbContactInfo.Name = "gbContactInfo";
-            this.gbContactInfo.Size = new System.Drawing.Size(308, 50);
+            this.gbContactInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbContactInfo.Size = new System.Drawing.Size(411, 62);
             this.gbContactInfo.TabIndex = 9;
             this.gbContactInfo.TabStop = false;
             this.gbContactInfo.Text = "Contact Information";
@@ -162,18 +171,20 @@
             // 
             this.lblMail.AutoSize = true;
             this.lblMail.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblMail.Location = new System.Drawing.Point(35, 25);
+            this.lblMail.Location = new System.Drawing.Point(47, 31);
+            this.lblMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(267, 15);
+            this.lblMail.Size = new System.Drawing.Size(333, 18);
             this.lblMail.TabIndex = 1;
             this.lblMail.Text = "email@gmail.com                                              .";
             // 
             // imgMail
             // 
             this.imgMail.Image = global::Chat.Properties.Resources.mail;
-            this.imgMail.Location = new System.Drawing.Point(7, 21);
+            this.imgMail.Location = new System.Drawing.Point(9, 26);
+            this.imgMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgMail.Name = "imgMail";
-            this.imgMail.Size = new System.Drawing.Size(24, 22);
+            this.imgMail.Size = new System.Drawing.Size(32, 27);
             this.imgMail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgMail.TabIndex = 0;
             this.imgMail.TabStop = false;
@@ -188,9 +199,11 @@
             this.gbBasicInfo.Controls.Add(this.lblA);
             this.gbBasicInfo.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbBasicInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.gbBasicInfo.Location = new System.Drawing.Point(13, 201);
+            this.gbBasicInfo.Location = new System.Drawing.Point(17, 247);
+            this.gbBasicInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbBasicInfo.Name = "gbBasicInfo";
-            this.gbBasicInfo.Size = new System.Drawing.Size(145, 151);
+            this.gbBasicInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBasicInfo.Size = new System.Drawing.Size(193, 186);
             this.gbBasicInfo.TabIndex = 10;
             this.gbBasicInfo.TabStop = false;
             this.gbBasicInfo.Text = "Basic Information";
@@ -200,9 +213,10 @@
             this.lblBD.AutoSize = true;
             this.lblBD.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblBD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblBD.Location = new System.Drawing.Point(3, 17);
+            this.lblBD.Location = new System.Drawing.Point(4, 21);
+            this.lblBD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBD.Name = "lblBD";
-            this.lblBD.Size = new System.Drawing.Size(80, 16);
+            this.lblBD.Size = new System.Drawing.Size(101, 20);
             this.lblBD.TabIndex = 5;
             this.lblBD.Text = "Birth date";
             // 
@@ -211,18 +225,20 @@
             this.lblDateBirth.AutoSize = true;
             this.lblDateBirth.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblDateBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblDateBirth.Location = new System.Drawing.Point(6, 34);
+            this.lblDateBirth.Location = new System.Drawing.Point(8, 42);
+            this.lblDateBirth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateBirth.Name = "lblDateBirth";
-            this.lblDateBirth.Size = new System.Drawing.Size(66, 15);
+            this.lblDateBirth.Size = new System.Drawing.Size(81, 18);
             this.lblDateBirth.TabIndex = 4;
             this.lblDateBirth.Text = "27 Januari";
             // 
             // imgGender
             // 
             this.imgGender.Image = global::Chat.Properties.Resources.female;
-            this.imgGender.Location = new System.Drawing.Point(59, 75);
+            this.imgGender.Location = new System.Drawing.Point(79, 92);
+            this.imgGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgGender.Name = "imgGender";
-            this.imgGender.Size = new System.Drawing.Size(20, 28);
+            this.imgGender.Size = new System.Drawing.Size(27, 34);
             this.imgGender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgGender.TabIndex = 3;
             this.imgGender.TabStop = false;
@@ -232,9 +248,10 @@
             this.lblG.AutoSize = true;
             this.lblG.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblG.Location = new System.Drawing.Point(3, 85);
+            this.lblG.Location = new System.Drawing.Point(4, 105);
+            this.lblG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblG.Name = "lblG";
-            this.lblG.Size = new System.Drawing.Size(55, 15);
+            this.lblG.Size = new System.Drawing.Size(64, 18);
             this.lblG.TabIndex = 2;
             this.lblG.Text = "Gender";
             // 
@@ -243,9 +260,10 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblAge.Location = new System.Drawing.Point(7, 69);
+            this.lblAge.Location = new System.Drawing.Point(9, 85);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(25, 16);
+            this.lblAge.Size = new System.Drawing.Size(29, 20);
             this.lblAge.TabIndex = 1;
             this.lblAge.Text = "20";
             // 
@@ -254,9 +272,10 @@
             this.lblA.AutoSize = true;
             this.lblA.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblA.Location = new System.Drawing.Point(6, 52);
+            this.lblA.Location = new System.Drawing.Point(8, 64);
+            this.lblA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(35, 16);
+            this.lblA.Size = new System.Drawing.Size(42, 20);
             this.lblA.TabIndex = 0;
             this.lblA.Text = "Age";
             // 
@@ -265,9 +284,11 @@
             this.gbAstro.Controls.Add(this.imgZodiacSign);
             this.gbAstro.Font = new System.Drawing.Font("Georgia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbAstro.ForeColor = System.Drawing.Color.Teal;
-            this.gbAstro.Location = new System.Drawing.Point(171, 203);
+            this.gbAstro.Location = new System.Drawing.Point(228, 250);
+            this.gbAstro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbAstro.Name = "gbAstro";
-            this.gbAstro.Size = new System.Drawing.Size(99, 107);
+            this.gbAstro.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAstro.Size = new System.Drawing.Size(132, 132);
             this.gbAstro.TabIndex = 11;
             this.gbAstro.TabStop = false;
             this.gbAstro.Text = "Astro";
@@ -275,9 +296,10 @@
             // imgZodiacSign
             // 
             this.imgZodiacSign.Image = global::Chat.Properties.Resources.strelec;
-            this.imgZodiacSign.Location = new System.Drawing.Point(14, 23);
+            this.imgZodiacSign.Location = new System.Drawing.Point(19, 28);
+            this.imgZodiacSign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.imgZodiacSign.Name = "imgZodiacSign";
-            this.imgZodiacSign.Size = new System.Drawing.Size(70, 72);
+            this.imgZodiacSign.Size = new System.Drawing.Size(93, 89);
             this.imgZodiacSign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgZodiacSign.TabIndex = 5;
             this.imgZodiacSign.TabStop = false;
@@ -288,9 +310,11 @@
             this.gbAbout.Controls.Add(this.about);
             this.gbAbout.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.gbAbout.Location = new System.Drawing.Point(326, 144);
+            this.gbAbout.Location = new System.Drawing.Point(435, 177);
+            this.gbAbout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbAbout.Name = "gbAbout";
-            this.gbAbout.Size = new System.Drawing.Size(187, 208);
+            this.gbAbout.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAbout.Size = new System.Drawing.Size(249, 256);
             this.gbAbout.TabIndex = 12;
             this.gbAbout.TabStop = false;
             this.gbAbout.Text = "About";
@@ -298,9 +322,10 @@
             // btnSave
             // 
             this.btnSave.ForeColor = System.Drawing.Color.Maroon;
-            this.btnSave.Location = new System.Drawing.Point(105, 179);
+            this.btnSave.Location = new System.Drawing.Point(140, 220);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -309,11 +334,12 @@
             // 
             // about
             // 
-            this.about.Location = new System.Drawing.Point(12, 21);
+            this.about.Location = new System.Drawing.Point(16, 26);
+            this.about.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.about.Multiline = true;
             this.about.Name = "about";
             this.about.ReadOnly = true;
-            this.about.Size = new System.Drawing.Size(168, 69);
+            this.about.Size = new System.Drawing.Size(223, 84);
             this.about.TabIndex = 0;
             this.about.TextChanged += new System.EventHandler(this.about_TextChanged);
             // 
@@ -323,9 +349,10 @@
             this.edit.BackgroundImage = global::Chat.Properties.Resources.edit;
             this.edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.edit.FlatAppearance.BorderSize = 0;
-            this.edit.Location = new System.Drawing.Point(490, 75);
+            this.edit.Location = new System.Drawing.Point(645, 108);
+            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(32, 32);
+            this.edit.Size = new System.Drawing.Size(43, 39);
             this.edit.TabIndex = 1;
             this.edit.UseVisualStyleBackColor = false;
             this.edit.Click += new System.EventHandler(this.edit_Click);
@@ -333,11 +360,12 @@
             // imgAvatar
             // 
             this.imgAvatar.Image = global::Chat.Properties.Resources.f_4;
-            this.imgAvatar.Location = new System.Drawing.Point(12, 2);
-            this.imgAvatar.MaximumSize = new System.Drawing.Size(127, 125);
-            this.imgAvatar.MinimumSize = new System.Drawing.Size(127, 125);
+            this.imgAvatar.Location = new System.Drawing.Point(16, 2);
+            this.imgAvatar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgAvatar.MaximumSize = new System.Drawing.Size(169, 154);
+            this.imgAvatar.MinimumSize = new System.Drawing.Size(169, 154);
             this.imgAvatar.Name = "imgAvatar";
-            this.imgAvatar.Size = new System.Drawing.Size(127, 125);
+            this.imgAvatar.Size = new System.Drawing.Size(169, 154);
             this.imgAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgAvatar.TabIndex = 0;
             this.imgAvatar.TabStop = false;
@@ -348,9 +376,10 @@
             this.btnCamera.BackgroundImage = global::Chat.Properties.Resources.camera;
             this.btnCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCamera.FlatAppearance.BorderSize = 0;
-            this.btnCamera.Location = new System.Drawing.Point(145, 98);
+            this.btnCamera.Location = new System.Drawing.Point(193, 121);
+            this.btnCamera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCamera.Name = "btnCamera";
-            this.btnCamera.Size = new System.Drawing.Size(48, 40);
+            this.btnCamera.Size = new System.Drawing.Size(64, 49);
             this.btnCamera.TabIndex = 13;
             this.btnCamera.UseVisualStyleBackColor = false;
             this.btnCamera.Visible = false;
@@ -362,10 +391,10 @@
             // 
             // Profile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(528, 355);
+            this.ClientSize = new System.Drawing.Size(701, 428);
             this.Controls.Add(this.btnCamera);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.gbAbout);
@@ -378,9 +407,9 @@
             this.Controls.Add(this.imgAvatar);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(544, 393);
-            this.MinimumSize = new System.Drawing.Size(544, 393);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(719, 473);
+            this.MinimumSize = new System.Drawing.Size(719, 473);
             this.Name = "Profile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profile";
