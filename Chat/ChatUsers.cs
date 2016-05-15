@@ -40,7 +40,7 @@ namespace Chat
                 else lstUsers.Items[i].ForeColor = Color.DodgerBlue;
             list = users.Values.OrderBy(o => o.fullname).ToList();
             list.Remove(active);
-            toolTip1.SetToolTip(exit, "Back to your profile ");
+            toolTip1.SetToolTip(btnBack, "Back to your profile ");
             toolTip1.SetToolTip(btnSend, "Send your message ");
         }
 
@@ -69,10 +69,21 @@ namespace Chat
                     lstMessages.Items.Add(m.ToString());
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            lstMessages.Items.Add(txtChat.Text);
+        }
+
+        private void txtChat_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnSend.PerformClick();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Profile profil = new Profile(Profile.active, Profile.users);
+            Profile profil = new Profile(active, users);
             profil.Show();
         }
 
@@ -85,11 +96,6 @@ namespace Chat
                 myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
                 return myCp;
             }
-        }
-
-        private void btnSend_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

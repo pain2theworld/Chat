@@ -74,9 +74,9 @@
             this.gbMenu.Controls.Add(this.btnGame);
             this.gbMenu.Font = new System.Drawing.Font("Georgia", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbMenu.Location = new System.Drawing.Point(452, 2);
-            this.gbMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMenu.Margin = new System.Windows.Forms.Padding(4);
             this.gbMenu.Name = "gbMenu";
-            this.gbMenu.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbMenu.Padding = new System.Windows.Forms.Padding(4);
             this.gbMenu.Size = new System.Drawing.Size(244, 98);
             this.gbMenu.TabIndex = 3;
             this.gbMenu.TabStop = false;
@@ -90,7 +90,7 @@
             this.btnSignOut.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
             this.btnSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.btnSignOut.Location = new System.Drawing.Point(163, 23);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(69, 59);
             this.btnSignOut.TabIndex = 3;
@@ -104,7 +104,7 @@
             this.btnFriends.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFriends.FlatAppearance.BorderSize = 0;
             this.btnFriends.Location = new System.Drawing.Point(8, 23);
-            this.btnFriends.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFriends.Margin = new System.Windows.Forms.Padding(4);
             this.btnFriends.Name = "btnFriends";
             this.btnFriends.Size = new System.Drawing.Size(69, 59);
             this.btnFriends.TabIndex = 2;
@@ -120,7 +120,7 @@
             this.btnGame.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
             this.btnGame.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
             this.btnGame.Location = new System.Drawing.Point(85, 23);
-            this.btnGame.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGame.Margin = new System.Windows.Forms.Padding(4);
             this.btnGame.Name = "btnGame";
             this.btnGame.Size = new System.Drawing.Size(69, 59);
             this.btnGame.TabIndex = 1;
@@ -139,7 +139,6 @@
             this.lblName.Size = new System.Drawing.Size(27, 31);
             this.lblName.TabIndex = 6;
             this.lblName.Text = "*";
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // lblSurname
             // 
@@ -159,9 +158,9 @@
             this.gbContactInfo.Controls.Add(this.imgMail);
             this.gbContactInfo.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbContactInfo.Location = new System.Drawing.Point(16, 177);
-            this.gbContactInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbContactInfo.Margin = new System.Windows.Forms.Padding(4);
             this.gbContactInfo.Name = "gbContactInfo";
-            this.gbContactInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbContactInfo.Padding = new System.Windows.Forms.Padding(4);
             this.gbContactInfo.Size = new System.Drawing.Size(411, 62);
             this.gbContactInfo.TabIndex = 9;
             this.gbContactInfo.TabStop = false;
@@ -182,7 +181,7 @@
             // 
             this.imgMail.Image = global::Chat.Properties.Resources.mail;
             this.imgMail.Location = new System.Drawing.Point(9, 26);
-            this.imgMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgMail.Margin = new System.Windows.Forms.Padding(4);
             this.imgMail.Name = "imgMail";
             this.imgMail.Size = new System.Drawing.Size(32, 27);
             this.imgMail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,9 +199,9 @@
             this.gbBasicInfo.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbBasicInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.gbBasicInfo.Location = new System.Drawing.Point(17, 247);
-            this.gbBasicInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBasicInfo.Margin = new System.Windows.Forms.Padding(4);
             this.gbBasicInfo.Name = "gbBasicInfo";
-            this.gbBasicInfo.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBasicInfo.Padding = new System.Windows.Forms.Padding(4);
             this.gbBasicInfo.Size = new System.Drawing.Size(193, 186);
             this.gbBasicInfo.TabIndex = 10;
             this.gbBasicInfo.TabStop = false;
@@ -236,7 +235,7 @@
             // 
             this.imgGender.Image = global::Chat.Properties.Resources.female;
             this.imgGender.Location = new System.Drawing.Point(79, 92);
-            this.imgGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgGender.Margin = new System.Windows.Forms.Padding(4);
             this.imgGender.Name = "imgGender";
             this.imgGender.Size = new System.Drawing.Size(27, 34);
             this.imgGender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -285,9 +284,9 @@
             this.gbAstro.Font = new System.Drawing.Font("Georgia", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbAstro.ForeColor = System.Drawing.Color.Teal;
             this.gbAstro.Location = new System.Drawing.Point(228, 250);
-            this.gbAstro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAstro.Margin = new System.Windows.Forms.Padding(4);
             this.gbAstro.Name = "gbAstro";
-            this.gbAstro.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAstro.Padding = new System.Windows.Forms.Padding(4);
             this.gbAstro.Size = new System.Drawing.Size(132, 132);
             this.gbAstro.TabIndex = 11;
             this.gbAstro.TabStop = false;
@@ -297,7 +296,7 @@
             // 
             this.imgZodiacSign.Image = global::Chat.Properties.Resources.strelec;
             this.imgZodiacSign.Location = new System.Drawing.Point(19, 28);
-            this.imgZodiacSign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgZodiacSign.Margin = new System.Windows.Forms.Padding(4);
             this.imgZodiacSign.Name = "imgZodiacSign";
             this.imgZodiacSign.Size = new System.Drawing.Size(93, 89);
             this.imgZodiacSign.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -311,9 +310,9 @@
             this.gbAbout.Font = new System.Drawing.Font("Georgia", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.gbAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.gbAbout.Location = new System.Drawing.Point(435, 177);
-            this.gbAbout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAbout.Margin = new System.Windows.Forms.Padding(4);
             this.gbAbout.Name = "gbAbout";
-            this.gbAbout.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbAbout.Padding = new System.Windows.Forms.Padding(4);
             this.gbAbout.Size = new System.Drawing.Size(249, 256);
             this.gbAbout.TabIndex = 12;
             this.gbAbout.TabStop = false;
@@ -323,7 +322,7 @@
             // 
             this.btnSave.ForeColor = System.Drawing.Color.Maroon;
             this.btnSave.Location = new System.Drawing.Point(140, 220);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 28);
             this.btnSave.TabIndex = 1;
@@ -335,13 +334,12 @@
             // about
             // 
             this.about.Location = new System.Drawing.Point(16, 26);
-            this.about.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.about.Margin = new System.Windows.Forms.Padding(4);
             this.about.Multiline = true;
             this.about.Name = "about";
             this.about.ReadOnly = true;
             this.about.Size = new System.Drawing.Size(223, 84);
             this.about.TabIndex = 0;
-            this.about.TextChanged += new System.EventHandler(this.about_TextChanged);
             // 
             // edit
             // 
@@ -350,7 +348,7 @@
             this.edit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.edit.FlatAppearance.BorderSize = 0;
             this.edit.Location = new System.Drawing.Point(645, 108);
-            this.edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edit.Margin = new System.Windows.Forms.Padding(4);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(43, 39);
             this.edit.TabIndex = 1;
@@ -361,7 +359,7 @@
             // 
             this.imgAvatar.Image = global::Chat.Properties.Resources.f_4;
             this.imgAvatar.Location = new System.Drawing.Point(16, 2);
-            this.imgAvatar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imgAvatar.Margin = new System.Windows.Forms.Padding(4);
             this.imgAvatar.MaximumSize = new System.Drawing.Size(169, 154);
             this.imgAvatar.MinimumSize = new System.Drawing.Size(169, 154);
             this.imgAvatar.Name = "imgAvatar";
@@ -377,13 +375,13 @@
             this.btnCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCamera.FlatAppearance.BorderSize = 0;
             this.btnCamera.Location = new System.Drawing.Point(193, 121);
-            this.btnCamera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCamera.Margin = new System.Windows.Forms.Padding(4);
             this.btnCamera.Name = "btnCamera";
             this.btnCamera.Size = new System.Drawing.Size(64, 49);
             this.btnCamera.TabIndex = 13;
             this.btnCamera.UseVisualStyleBackColor = false;
             this.btnCamera.Visible = false;
-            this.btnCamera.Click += new System.EventHandler(this.button1_Click);
+            this.btnCamera.Click += new System.EventHandler(this.btnCamera_Click);
             // 
             // openFileDialog1
             // 

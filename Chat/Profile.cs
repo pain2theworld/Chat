@@ -31,9 +31,8 @@ namespace Chat
             users = all;
             r = new Random();
             avatar = new Dictionary<int, Image>();
-            InitializeComponent();
             BinarySerialize(active);
-
+            InitializeComponent();
         }
 
         private void Profile_Load(object sender, EventArgs e)
@@ -58,10 +57,8 @@ namespace Chat
             imgGender.Image = setGenderImage(active.gender);
             lblAge.Text = Age(active.dateBirth);
             parts = active.dateBirth.Split('/');
-            lblDateBirth.Text = parts[0] + " " + setMonth(Convert.ToInt32(parts[1]));
-            imgZodiacSign.Image = ZodiacSign(Convert.ToInt32(parts[0]), Convert.ToInt32(parts[1]));
-            InitializeComponent();
-        
+            lblDateBirth.Text = parts[0] + " " + setMonth(int.Parse(parts[1]));
+            imgZodiacSign.Image = ZodiacSign(int.Parse(parts[0]), int.Parse(parts[1]));
         }
 
         private void btnFriends_Click(object sender, EventArgs e)
@@ -110,14 +107,15 @@ namespace Chat
             }
             return picture;
         }
-        public Image setGenderImage(String gender)
+
+        public Image setGenderImage(string gender)
         {
-            if (gender.Equals("female"))
+            if (gender == "female")
                 return Chat.Properties.Resources.female;
             else return Chat.Properties.Resources.male;
         }
 
-        public String setMonth(Int32 n)
+        public string setMonth(int n)
         {
             if (n == 1)
                 return "January";
@@ -157,7 +155,6 @@ namespace Chat
 
         public Image ZodiacSign(int day, int m)
         {
-
             if ((day >= 20 && m == 1) || (day <= 18 && m == 2))
                 return Chat.Properties.Resources.vodolija;
             else if ((day >= 19 && m == 2) || (day <= 20 && m == 3))
@@ -184,12 +181,6 @@ namespace Chat
                 return Chat.Properties.Resources.jarec;
         }
 
-
-        private void about_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void edit_Click(object sender, EventArgs e)
         {
             btnSave.Focus();
@@ -205,17 +196,7 @@ namespace Chat
             btnCamera.Visible = false;
         }
 
-        private void lblName_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCamera_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() != DialogResult.Cancel)
             {
@@ -223,7 +204,6 @@ namespace Chat
             }
             imgAvatar.Image = null;
             imgAvatar.ImageLocation = active.avatar;
-
         }
 
         private const int CP_NOCLOSE_BUTTON = 0x200;
