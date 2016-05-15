@@ -64,7 +64,7 @@ namespace Chat
         private void btnFriends_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChatUsers friends = new ChatUsers(active, users);
+            ChatUsers friends = new ChatUsers(active, Form1.users);
             friends.Show();
         }
 

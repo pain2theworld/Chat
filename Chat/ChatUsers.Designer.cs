@@ -41,6 +41,10 @@
             this.Logo = new System.Windows.Forms.PictureBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblActiveUser = new System.Windows.Forms.Label();
+            this.lblActive = new System.Windows.Forms.Label();
             this.gbUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +105,7 @@
             this.lstMessages.TabIndex = 12;
             this.lstMessages.UseCompatibleStateImageBehavior = false;
             this.lstMessages.View = System.Windows.Forms.View.List;
+            this.lstMessages.SelectedIndexChanged += new System.EventHandler(this.lstMessages_SelectedIndexChanged);
             // 
             // llblName
             // 
@@ -167,12 +172,40 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // lblActiveUser
+            // 
+            this.lblActiveUser.AutoSize = true;
+            this.lblActiveUser.BackColor = System.Drawing.Color.Transparent;
+            this.lblActiveUser.Font = new System.Drawing.Font("Georgia", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblActiveUser.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblActiveUser.Location = new System.Drawing.Point(299, 137);
+            this.lblActiveUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblActiveUser.Name = "lblActiveUser";
+            this.lblActiveUser.Size = new System.Drawing.Size(23, 27);
+            this.lblActiveUser.TabIndex = 21;
+            this.lblActiveUser.Text = "*";
+            // 
+            // lblActive
+            // 
+            this.lblActive.AutoSize = true;
+            this.lblActive.BackColor = System.Drawing.Color.Transparent;
+            this.lblActive.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblActive.ForeColor = System.Drawing.Color.Aquamarine;
+            this.lblActive.Location = new System.Drawing.Point(299, 110);
+            this.lblActive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblActive.Name = "lblActive";
+            this.lblActive.Size = new System.Drawing.Size(110, 23);
+            this.lblActive.TabIndex = 22;
+            this.lblActive.Text = "Active user:";
+            // 
             // ChatUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Chat.Properties.Resources.BG_DarkCyan;
             this.ClientSize = new System.Drawing.Size(904, 540);
+            this.Controls.Add(this.lblActive);
+            this.Controls.Add(this.lblActiveUser);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.Logo);
@@ -204,5 +237,9 @@
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label lblActiveUser;
+        private System.Windows.Forms.Label lblActive;
     }
 }

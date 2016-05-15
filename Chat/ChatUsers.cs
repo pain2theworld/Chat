@@ -12,9 +12,9 @@ namespace Chat
 {
     public partial class ChatUsers : Form
     {
-        User active;
-        Dictionary<string, User> users;
-        List<User> list;
+        public User active;
+        public Dictionary<string, User> users;
+        public List<User> list;
 
         public ChatUsers()
         {
@@ -25,11 +25,20 @@ namespace Chat
         {
             active = u;
             users = all;
+            list = new List<User>();
             InitializeComponent();
         }
 
         private void ChatUsers_Load(object sender, EventArgs e)
         {
+            Load_Users();
+            toolTip1.SetToolTip(btnBack, "Back to your profile ");
+            toolTip1.SetToolTip(btnSend, "Send your message ");
+        }
+
+        public void Load_Users()
+        {
+            lstUsers.Items.Clear();
             users.Add("Alala", new User("Alala", "ALala La", "pas", "email", "female", "15/12/1985", "I love me."));
             users.Add("Blala", new User("Blala", "BLala La", "pas", "email", "female", "15/12/1985", "I love me."));
             foreach (User u in users.Values)
@@ -40,8 +49,7 @@ namespace Chat
                 else lstUsers.Items[i].ForeColor = Color.DodgerBlue;
             list = users.Values.OrderBy(o => o.fullname).ToList();
             list.Remove(active);
-            toolTip1.SetToolTip(btnBack, "Back to your profile ");
-            toolTip1.SetToolTip(btnSend, "Send your message ");
+            lblActiveUser.Text = active.fullname;
         }
 
         private void lstUsers_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,6 +80,7 @@ namespace Chat
         private void btnSend_Click(object sender, EventArgs e)
         {
             lstMessages.Items.Add(txtChat.Text);
+            txtChat.Clear();
         }
 
         private void txtChat_KeyDown(object sender, KeyEventArgs e)
@@ -83,7 +92,7 @@ namespace Chat
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Profile profil = new Profile(active, users);
+            Profile profil = new Profile(active, Form1.users);
             profil.Show();
         }
 
@@ -96,6 +105,11 @@ namespace Chat
                 myCp.ClassStyle = myCp.ClassStyle | CP_NOCLOSE_BUTTON;
                 return myCp;
             }
+        }
+
+        private void lstMessages_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lstMessages.SelectedIndices.Clear();
         }
     }
 }

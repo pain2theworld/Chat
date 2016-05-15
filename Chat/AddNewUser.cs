@@ -185,7 +185,7 @@ namespace Chat
                 // File.OpenRead(path + "\\Sudoku.oku");
                 File.Delete(path + "\\Users.us");
             }
-            catch (Exception e)
+            catch
             {
                 MessageBox.Show("Error!!");
             }
