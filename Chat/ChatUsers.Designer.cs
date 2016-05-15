@@ -94,6 +94,7 @@
             this.txtChat.Name = "txtChat";
             this.txtChat.Size = new System.Drawing.Size(456, 69);
             this.txtChat.TabIndex = 9;
+            this.txtChat.Visible = false;
             this.txtChat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChat_KeyDown);
             // 
             // lstMessages
@@ -105,6 +106,7 @@
             this.lstMessages.TabIndex = 12;
             this.lstMessages.UseCompatibleStateImageBehavior = false;
             this.lstMessages.View = System.Windows.Forms.View.List;
+            this.lstMessages.Visible = false;
             this.lstMessages.SelectedIndexChanged += new System.EventHandler(this.lstMessages_SelectedIndexChanged);
             // 
             // llblName
