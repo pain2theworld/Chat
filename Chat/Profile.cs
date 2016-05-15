@@ -56,7 +56,7 @@ namespace Chat
             lblMail.Text = active.email;
             imgGender.Image = setGenderImage(active.gender);
             lblAge.Text = Age(active.dateBirth);
-            parts = active.dateBirth.Split('/');
+            parts = active.dateBirth.Split('/' , '.');
             lblDateBirth.Text = parts[0] + " " + setMonth(int.Parse(parts[1]));
             imgZodiacSign.Image = ZodiacSign(int.Parse(parts[0]), int.Parse(parts[1]));
         }

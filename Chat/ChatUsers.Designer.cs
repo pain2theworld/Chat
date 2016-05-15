@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Online", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Offline", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Online", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Offline", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChatUsers));
             this.gbUsers = new System.Windows.Forms.GroupBox();
             this.lstUsers = new System.Windows.Forms.ListView();
@@ -41,8 +41,6 @@
             this.Logo = new System.Windows.Forms.PictureBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.lblActiveUser = new System.Windows.Forms.Label();
             this.lblActive = new System.Windows.Forms.Label();
             this.gbUsers.SuspendLayout();
@@ -68,13 +66,13 @@
             // 
             this.lstUsers.BackColor = System.Drawing.Color.LightCyan;
             this.lstUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            listViewGroup1.Header = "Online";
-            listViewGroup1.Name = "Online";
-            listViewGroup2.Header = "Offline";
-            listViewGroup2.Name = "Offline";
+            listViewGroup3.Header = "Online";
+            listViewGroup3.Name = "Online";
+            listViewGroup4.Header = "Offline";
+            listViewGroup4.Name = "Offline";
             this.lstUsers.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
+            listViewGroup3,
+            listViewGroup4});
             this.lstUsers.Location = new System.Drawing.Point(3, 22);
             this.lstUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lstUsers.MultiSelect = false;
@@ -151,6 +149,7 @@
             this.btnSend.TabIndex = 19;
             this.btnSend.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSend.UseVisualStyleBackColor = false;
+            this.btnSend.Visible = false;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // btnBack
@@ -183,7 +182,7 @@
             this.lblActiveUser.Location = new System.Drawing.Point(299, 137);
             this.lblActiveUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblActiveUser.Name = "lblActiveUser";
-            this.lblActiveUser.Size = new System.Drawing.Size(23, 27);
+            this.lblActiveUser.Size = new System.Drawing.Size(22, 27);
             this.lblActiveUser.TabIndex = 21;
             this.lblActiveUser.Text = "*";
             // 
@@ -239,8 +238,6 @@
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label lblActiveUser;
         private System.Windows.Forms.Label lblActive;
     }

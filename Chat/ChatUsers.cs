@@ -56,6 +56,9 @@ namespace Chat
         {
             lstMessages.Visible = true;
             txtChat.Visible = true;
+            btnSend.Visible = true;
+            toolTip1.SetToolTip(btnSend, "Send your message");
+            toolTip1.SetToolTip(btnBack, "Back to your profile");
             lstMessages.Items.Clear();
 
             int selected = 0;
@@ -92,7 +95,7 @@ namespace Chat
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Profile profil = new Profile(active, Form1.users);
+            Profile profil = new Profile(Profile.active, Profile.users);
             profil.Show();
         }
 
@@ -110,6 +113,27 @@ namespace Chat
         private void lstMessages_SelectedIndexChanged(object sender, EventArgs e)
         {
             lstMessages.SelectedIndices.Clear();
+        }
+
+        private void btnFriends_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChatUsers friends = new ChatUsers(active, Form1.users);
+            friends.Show();
+        }
+
+        private void btnGame_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LettersGame igra = new LettersGame();
+            igra.Show();
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 odjava = new Form1();
+            odjava.Show();
         }
     }
 }
