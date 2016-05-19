@@ -14,18 +14,16 @@ namespace Chat
         public char Letter { get; set; }
         private int Height;
         public bool IsHit { get; set; }
-
-        public static int i = 0;
-
+        
         public LetterCircle(Random random, int width, int height)
         {
             int[] Tekst = new int[26] {83,84,79,75,69,73,75,85,80,73,83,78,65,65,78,65,83,84,65,83,73,74,65,120,80,39};
-        
-            if (i<23){
+            
+            if (i<23) {
                 Letter = (char)Tekst[i];
                 i++;
             }
-            else{
+            else {
                 Letter = (char)((int)'A' + random.Next(26));
             }
             int x = random.Next(RADIUS, width - (2 * RADIUS));
